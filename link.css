@@ -81,7 +81,8 @@ img {
 }
 
 .picture {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	justify-content: space-around;
 	margin-top: 15px;
 }
@@ -147,8 +148,4 @@ img {
 		
 	}
 	.title{padding: 20px;}
-}
-@media only screen and (min-width: 600px){
-	header{width:100vw;
-	}
 }
