@@ -1,0 +1,151 @@
+* {
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 0%;
+	margin: 0;
+}
+.conteiner {
+	width: 100vw;
+	margin: auto;
+	margin-bottom: 15px;
+}
+header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto;
+	padding: 30px;
+	text-align: center;
+	background: orangered;
+	border-radius: 10%;
+}
+.list li {
+	list-style: none;
+}
+
+.list {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+.list li a {
+	padding-left: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+h1 {
+	font-family: 'Pacifico', cursive;
+	margin-bottom: 10px;
+}
+main {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.one {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	margin: auto;
+	text-align: center;
+	width: 700px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.one1 {
+	width: 698px;
+	align-items: center;
+}
+img {
+	margin-top: 10px;
+	border-radius: 10px;
+}
+
+.one2 {
+	width: 698px;
+	align-items: center;
+}
+/*Strona o nas */
+
+.abaut {
+	padding: 15px;
+}
+.abaut h1 {
+	text-align: center;
+}
+.abaut .tekst {
+	text-align: center;
+}
+
+.picture {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 15px;
+}
+
+.a {
+	border: 1px solid black;
+	width: 300px;
+	height: 300px;
+	border-radius: 10px;
+}
+.b {
+	margin: 0;
+	padding: 0;
+	border: 1px solid black;
+	width: 300px;
+	height: 300px;
+	border-radius: 10px;
+}
+.c {
+	border: 1px solid black;
+	width: 300px;
+	height: 300px;
+	border-radius: 10px;
+}
+.d {
+	border: 1px solid black;
+	width: 300px;
+	height: 300px;
+	border-radius: 10px;
+}
+@media only screen and (max-width: 600px) {
+	.picture {
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+	}
+	.a {
+		margin-bottom: 10px;
+	}
+	.b {
+		margin-bottom: 10px;
+	}
+	.c {
+		margin-bottom: 10px;
+	}
+	.d {
+		margin-top: 10px;
+	}
+	.main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.one {
+		width: 100vw;
+	}
+	.one1 {
+		width: 100vw;
+	}
+	.one2 {
+		width: 100vw;
+		
+	}
+	.title{padding: 20px;}
+}
