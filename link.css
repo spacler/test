@@ -83,7 +83,7 @@ img {
 .picture {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	justify-content: space-around;
+	justify-content: center;
 	margin-top: 15px;
 	
 }
