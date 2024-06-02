@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warsztat Samochodowy</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('garage-background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #workshop-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .service {
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin-top: 5px;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-image: url('garage-background-mobile.jpg');
+            }
+
+            .service {
+                width: 95%;
+            }
+        }
+
+        ul{margin-top: 6px;}
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Auto Serwis "Mechanik"</h1>
+    </div>
+
+    <div id="workshop-info">
+        <h2>Usługi</h2>
+        <div class="service" id="tire-change">
+            <h3>Wymiana opon</h3>
+            <p>Wymiana opon to kluczowy proces,który zapewnia bezpieczeństwo i optymalną wydajność twojego
+                samochodu.Opony są jednym z najwaznieszych elementów,wpływając na przyczepność,komfort jazdy i zuzycie
+                paliwa.Poniżej znajdziesz szczegóły dotyczące wymiany opon:</p>
+            <ol>
+                <li>Demontaz opony</li>
+                <ul>
+                    <li>Mechanik zdejmuje starą oponę z felgi, korzystając z odpowiednich narzędzi.</li>
+                    <li>Upewnia się, że felga nie jest uszkodzona.</li>
+                </ul>
+                <li>Montaż nowej opony:</li>
+                <ul>
+                    <li>Nowa opona jest starannie umieszczana na feldze.</li>
+                    <li>Mechanik dba o właściwe dopasowanie i równomierne rozmieszczenie opony na feldze.</li>
+                </ul>
+                <li>Wyrównywanie i wyważanie</li>
+                <ul>
+                    <li>Felga z nową oponą jest umieszczana na maszynie do wyrównywania i wyważania.</li>
+                    <li>Mechanik sprawdza, czy opona jest równomiernie wyważona, aby uniknąć wibracji podczas jazdy.
+                    </li>
+                </ul>
+                <li>Sprawdzenie ciśnienia:</li>
+                <ul>
+                    <li>Po wymianie opony, mechanik sprawdza ciśnienie w nowej oponie.</li>
+                    <li>Odpowiednie ciśnienie jest kluczowe dla bezpieczeństwa i trwałości opony.</li>
+                </ul>
+                <li>Wyważenie kół:</li>
+                <ul>
+                    <li>Mechanik wyważa całe koło (oponę i felgę) na specjalnej maszynie.</li>
+                    <li>To zapobiega wibracjom i nierównomiernemu zużyciu opony.</li>
+                </ul>
+                <li>Zalecenia:</li>
+                <ul>
+                    <li> Wymieniaj opony zgodnie z zaleceniami producenta lub co najmniej raz w roku.</li>
+                    <li>Monitoruj bieżnik opon i wymieniaj je, gdy osiągną minimalną głębokość bieżnika (zwykle 1,6 mm).
+                    </li>
+                </ul>
+            </ol>
+            <p>Wymiana opon to rutynowe zadanie, ale ważne dla bezpieczeństwa na drodze. Pamiętaj, aby korzystać z usług
+                profesjonalnego warsztatu samochodowego, który zapewni Ci fachowe wykonanie tej operacji.</p>
+        </div>
+        <div class="service" id="engine-repair">
+            <h3>Naprawa silnika</h3>
+            <p>Naprawa silników jest jednym z najważniejszych zadań w warsztacie samochodowym. Poprawne działanie
+                silnika wpływa na wydajność, osiągi i bezpieczeństwo pojazdu. Poniżej znajdziesz szczegóły dotyczące
+                naprawy silników:</p>
+            <ol>
+                <li>Diagnoza</li>
+                <ul>
+                    <li> Mechanik przeprowadza dokładną diagnozę, aby zidentyfikować źródło problemu.</li>
+                    <li>Wykorzystuje specjalistyczne narzędzia diagnostyczne i odczytuje kody błędów z komputera
+                        samochodu.</li>
+                </ul>
+                <li>Demontaż i inspekcja</li>
+                <ul>
+                    <li>Silnik jest demontowany, a poszczególne komponenty są dokładnie sprawdzane</li>
+                    <li>Mechanik ocenia stan tłoków, pierścieni, wału korbowego, głowicy cylindrów i innych elementów.
+                    </li>
+                </ul>
+                <li>Naprawa lub wymiana części:</li>
+                <ul>
+                    <li>Uszkodzone lub zużyte części są naprawiane lub wymieniane.</li>
+                    <li>To może obejmować wymianę tłoków, uszczelniaczy, łożysk, pasków rozrządu itp.</li>
+                </ul>
+                <li>Regulacja i montaż:</li>
+                <ul>
+                    <li>Po naprawie komponenty są starannie zmontowane.</li>
+                    <li>Mechanik dokonuje regulacji, takiej jak ustawienie luzów zaworowych czy synchronizacja wału
+                        korbowego.</li>
+                </ul>
+                <li>Testy i ostateczna kontrola:</li>
+                <ul>
+                    <li>Silnik jest uruchamiany, a mechanik sprawdza jego działanie.</li>
+                    <li>Wykonuje testy na wolnych obrotach, pod obciążeniem i w różnych warunkach.</li>
+                </ul>
+                <li>Wymiana płynów i filtrów:</li>
+                <ul>
+                    <li>W trakcie naprawy warto wymienić olej silnikowy, filtr oleju i inne płyny.To zapewni optymalne
+                        działanie silnika.</li>
+                </ul>
+                <li>Zalecenia:</li>
+                <ul>
+                    <li>Regularnie serwisuj swój silnik, zgodnie z zaleceniami producenta.
+                        Monitoruj stan oleju, chłodnicy i innych płynów.
+                        Reaguj na wszelkie nieprawidłowości, takie jak dziwne dźwięki, spadek mocy czy wycieki płynów.
+                    </li>
+                </ul>
+            </ol>
+            <p>Naprawa silników wymaga wiedzy, doświadczenia i precyzji. Dlatego warto zaufać profesjonalnemu warsztatowi, który zadba o Twój samochód.</p>
+        </div>
+
+        <!-- Dodaj więcej usług zgodnie z potrzebą -->
+    </div>
+
+</body>
+
+</html>
