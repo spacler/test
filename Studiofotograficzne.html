@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Fotograficzne XYZ</title>
+    <meta name="description"
+        content="Profesjonalne studio fotograficzne XYZ oferuje szeroki zakres usług fotograficznych.">
+    <meta name="keywords" content="fotografia, studio fotograficzne, zdjęcia, sesje zdjęciowe">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 7px 15px;
+        }
+
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            flex: 1 1 200px;
+            width: 200px;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .nav {
+                flex-direction: column;
+            }
+
+            .gallery img {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Studio Fotograficzne XYZ</h1>
+    </div>
+
+    <div class="nav">
+        <a href="#home">Strona Główna</a>
+        <a href="studio1.html">O Nas</a>
+    </div>
+
+    <div class="gallery">
+        <!-- Tutaj dodaj zdjęcia -->
+        <img src="chrzest.jpg" alt="Przykładowe zdjęcie 1">
+        <img src="Komunia Swięta.jpg" alt="Przykładowe zdjęcie 2">
+        <img src="Slub.jpg" alt="Przykładowe zdjęcie 3">
+        <img src="https://cdn.pixabay.com/photo/2016/08/13/22/10/eucharist-1591663_1280.jpg"
+            alt="Przykładowe zdjęcie 3">
+        <img src="https://cdn.pixabay.com/photo/2015/03/30/16/42/cross-699617_960_720.jpg" alt="Przykładowe zdjęcie 3">
+        <img src="https://cdn.pixabay.com/photo/2016/05/03/10/41/dining-table-1368876_1280.jpg"
+            alt="Przykładowe zdjęcie 3">
+        <img src="https://cdn.pixabay.com/photo/2021/09/16/03/19/crucifix-6628192_1280.jpg" alt="Przykładowe zdjęcie 3">
+        <img src="https://cdn.pixabay.com/photo/2016/10/20/20/56/the-rosary-1756636_1280.jpg"
+            alt="Przykładowe zdjęcie 3">
+        <img src="https://cdn.pixabay.com/photo/2023/03/30/18/32/ai-generated-7888482_960_720.jpg"
+            alt="Przykładowe zdjęcie 3">
+        <img src="https://cdn.pixabay.com/photo/2024/04/29/15/28/bread-8728234_1280.jpg" alt="Przykładowe zdjęcie 3">
+        <!-- ... więcej zdjęć -->
+    </div>
+
+    <div class="footer">
+        <p>Kontakt: kontakt@studioxyz.pl | Tel: 123 456 789</p>
+    </div>
+
+</body>
+
+</html>
