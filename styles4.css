@@ -199,4 +199,5 @@ footer {
 		text-align: center;
 	}
 	.gallery-item:hover{transform: none;}
+	.underline-animation{none;}
 }
