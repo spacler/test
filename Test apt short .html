@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Panel Shortpick</title>
+
+<style>
+    /* STRONA = pełny ekran telefonu */
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #f3f3f3;
+        font-family: Arial, sans-serif;
+        overflow: hidden; /* nic nie wystaje */
+    }
+
+    /* CONTAINER przylega do krawędzi ekranu */
+    .conteiner {
+        width: 100vw;
+        height: 100vh;
+        background: white;
+        border: 2px solid black;
+        border-radius: 0; /* opcjonalnie można 12px, ale wtedy nie przylega */
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        box-sizing: border-box;
+        position: relative;
+        overflow-y: auto; /* przewijanie w pionie gdy za dużo treści */
+    }
+
+    /* BOXY NA GÓRZE */
+    .box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* INPUTY */
+    .g-input {
+        border: 1px solid black;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 6px;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: left;
+    }
+
+    /* GRID */
+    .box2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .f {
+        border: 1px solid black;
+        padding: 12px;
+        text-align: center;
+        background: rgb(77, 76, 76);
+        color: white;
+        border-radius: 6px;
+        font-size: 14px;
+        user-select: none;
+    }
+
+    .f:active {
+        transform: scale(0.97);
+        background: #555;
+    }
+
+    /* PRZYCISK UTWÓRZ — PRAWY DOLNY RÓG EKRANU */
+    #utworzBtn {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        width: 150px;
+        padding: 14px;
+        z-index: 50;
+    }
+
+    /* MODAL */
+    .modal-bg {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.2);
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .modal {
+        background: white;
+        padding: 20px;
+        width: calc(100% - 40px); /* mały margines */
+        max-width: 350px;
+        border-radius: 12px;
+        border: 1px solid black;
+        text-align: center;
+        margin: 20px; /* margines od brzegów */
+        box-sizing: border-box;
+    }
+
+    .modal-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 15px;
+    }
+</style>
+</head>
+
+<body>
+    <div class="conteiner">
+        <div class="box">
+            <input class="g-input" id="miejsceInput" placeholder="Miejsce" />
+            <input class="g-input" id="listaInput" placeholder="Lista inwentaryzacyjna" />
+        </div>
+
+        <div class="box2">
+            <button class="f">F4 = X</button>
+            <button class="f">Enter</button>
+            <button class="f">F2 = Automatyczna inwentaryzacja</button>
+            <button class="f">F6 = Lista inwentaryzacyjna</button>
+            <button class="f">F5 = Miejsce</button>
+        </div>
+    </div>
+
+    <!-- PRZYCISK UTWÓRZ NA CAŁYM EKRANIE -->
+    <button id="utworzBtn" class="f">F7 = Utwórz</button>
+
+    <!-- MODAL -->
+    <div class="modal-bg" id="modalBg">
+        <div class="modal">
+            <div class="modal-text">Czy na pewno chcesz kontynuować?</div>
+            <div class="modal-buttons">
+                <button class="modal-btn" id="btnTak">Tak</button>
+                <button class="modal-btn" id="btnNie">F4 = X</button>
+            </div>
+        </div>
+    </div>
+
+<script>
+document.getElementById("utworzBtn").onclick = () => {
+    document.getElementById("modalBg").style.display = "flex";
+};
+
+document.getElementById("btnNie").onclick = () => {
+    document.getElementById("modalBg").style.display = "none";
+};
+
+document.getElementById("btnTak").onclick = () => {
+    alert("Listy zostały utworzone");
+    document.getElementById("modalBg").style.display = "none";
+};
+</script>
+
+</body>
+</html>
