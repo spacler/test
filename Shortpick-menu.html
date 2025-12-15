@@ -1,0 +1,168 @@
+Przejdź do treści
+Historia czatu
+
+
+Powiedziałeś(-aś):
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Menu</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				width: 100vw;
+				height: 100vh;
+				background: #f3f3f3;
+				font-family: Arial, sans-serif;
+				overflow: hidden; /* nic nie wystaje */
+			}
+
+			/* CONTAINER przylega do krawędzi ekranu */
+			.conteiner {
+				width: 100vw;
+				height: 100vh;
+				background: white;
+				border-radius: 0; /* opcjonalnie można 12px, ale wtedy nie przylega */
+				display: flex;
+				flex-direction: column;
+				padding: 15px;
+				box-sizing: border-box;
+				position: relative;
+				overflow-y: auto; /* przewijanie w pionie gdy za dużo treści */
+			}
+
+			/* BOXY NA GÓRZE */
+			.box-button-1 {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="conteiner">
+			<div class="box-button-1">
+				<div class="button-app-1">F1=Inwentaryzacja</div>
+				<div class="button-app-1">F2=Inwentaryzacja shortpick</div>
+				<div class="button-app-1">F3=Rewizja/Kontrola ilości</div>
+			</div>
+			<div class="box-button-2">
+				<div class="button-app-2">F4=Wstecz</div>
+				<div class="button-app-2">F8-Następny</div>
+			</div>
+		</div>
+	</body>
+</html> przerob ten kod tak zeby wygladalo jak menu wyboru . Przyciski od f1 do f3 w kolumnie dla aplikacji mobilnej na flexie . pozostale w jednej lini na flexie z gapem w jednym boxie
+ChatGPT powiedział:
+OK 👍 Poniżej masz przerobiony, kompletny kod, który wygląda jak menu wyboru w aplikacji mobilnej:
+
+F1–F3 → kolumna (flex-column) – duże przyciski wyboru
+
+F4 i F8 → jedna linia (flex-row) w jednym boxie z gap
+
+styl „aplikacyjny”, czytelny na telefonie
+
+wszystko oparte wyłącznie na flexboxie
+
+✅ Gotowy kod (możesz wkleić 1:1)
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Menu</title>
+
+	<style>
+		body {
+			margin: 0;
+			width: 100vw;
+			height: 100vh;
+			background: #f3f3f3;
+			font-family: Arial, sans-serif;
+		}
+
+		/* CONTAINER – cały ekran */
+		.conteiner {
+			width: 100%;
+			height: 100%;
+			background: white;
+			display: flex;
+			flex-direction: column;
+			padding: 15px;
+			box-sizing: border-box;
+			gap: 25px;
+		}
+
+		/* GÓRNE MENU – F1–F3 */
+		.box-button-1 {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+		}
+
+		.button-app-1 {
+			padding: 18px;
+			border: 2px solid #000;
+			border-radius: 10px;
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+			background: #fafafa;
+			cursor: pointer;
+		}
+
+		.button-app-1:active {
+			background: #e0e0e0;
+		}
+
+		/* DOLNE MENU – F4 + F8 */
+		.box-button-2 {
+			margin-top: auto; /* spycha na dół ekranu */
+			display: flex;
+			gap: 15px;
+		}
+
+		.button-app-2 {
+			flex: 1;
+			padding: 16px;
+			border: 2px solid #000;
+			border-radius: 10px;
+			font-size: 15px;
+			font-weight: bold;
+			text-align: center;
+			background: #f0f0f0;
+			cursor: pointer;
+		}
+
+		.button-app-2:active {
+			background: #dcdcdc;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="conteiner">
+
+		<!-- MENU WYBORU -->
+		<div class="box-button-1">
+			<div class="button-app-1">F1 – Inwentaryzacja</div>
+			<div class="button-app-1">F2 – Inwentaryzacja Shortpick</div>
+			<div class="button-app-1">F3 – Rewizja / Kontrola ilości</div>
+		</div>
+
+		<!-- PRZYCISKI FUNKCYJNE -->
+		<div class="box-button-2">
+			<div class="button-app-2">F4 – Wstecz</div>
+			<div class="button-app-2">F8 – Następny</div>
+		</div>
+
+	</div>
+</body>
+</html>
