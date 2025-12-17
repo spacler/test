@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			/* STRONA = pełny ekran telefonu */
+			body {
+				margin: 0;
+				padding: 0;
+				width: 100vw;
+				height: 100vh;
+				background: #f3f3f3;
+				font-family: Arial, sans-serif;
+				overflow: hidden; /* nic nie wystaje */
+			}
+
+			/* CONTAINER przylega do krawędzi ekranu */
+			.conteiner {
+				width: 100vw;
+				height: 100vh;
+				background: white;
+				border-radius: 0; /* opcjonalnie można 12px, ale wtedy nie przylega */
+				display: flex;
+				flex-direction: column;
+				padding: 15px;
+				box-sizing: border-box;
+				position: relative;
+				overflow-y: auto; /* przewijanie w pionie gdy za dużo treści */
+			}
+
+			/* BOXY NA GÓRZE */
+			.box {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+
+			/* INPUTY */
+			.g-input {
+				border: 1px solid black;
+				padding: 12px;
+				font-size: 16px;
+				font-weight: bold;
+				border-radius: 6px;
+				width: 100%;
+				box-sizing: border-box;
+				text-align: left;
+			}
+
+			/* GRID */
+			.box2 {
+				width: 100%;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 10px;
+				margin-top: 20px;
+			}
+
+			.f {
+				border: 1px solid black;
+				padding: 12px;
+				text-align: center;
+				background: rgb(77, 76, 76);
+				color: white;
+				border-radius: 6px;
+				font-size: 14px;
+				user-select: none;
+			}
+
+			.f:active {
+				transform: scale(0.97);
+				background: #555;
+			}
+		</style>
+	</head>
+	<body>
+		<!DOCTYPE html>
+		<html lang="en">
+			<head>
+				<meta charset="UTF-8" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+				<title>Document</title>
+			</head>
+			<body>
+				<div class="conteiner">
+					<div class="box">
+						<input class="g-input" id="miejsceInput" placeholder="Miejsce" />
+						<input class="g-input" id="listaInput" placeholder="Lista inwentaryzacyjna" />
+					</div>
+
+					<div class="box2">
+						<button id="btnF4" class="f">F4 = X</button>
+						<button class="f">Enter</button>
+						<button class="f">F2 = Automatyczna inwentaryzacja</button>
+						<button id="btnF6" class="f">F6 = Lista inwentaryzacyjna</button>
+						<button id="btnF5" class="f">F5 = Miejsce</button>
+					</div>
+				</div>
+				<script>
+					document.getElementById('btnF4').onclick = () => {
+						// przejście do drugiego dokumentu
+						window.location.href = 'shortpickmenu.html';
+					};
+					const miejsceInput = document.getElementById('miejsceInput');
+					const listaInput = document.getElementById('listaInput');
+
+					document.getElementById('btnF5').onclick = () => {
+						miejsceInput.value = ''; // ← czyści pole
+						miejsceInput.focus(); // ← kursor miga
+					};
+
+					document.getElementById('btnF6').onclick = () => {
+						listaInput.value = ''; // ← czyści pole
+						listaInput.focus(); // ← kursor miga
+					};
+				</script>
+			</body>
+		</html>
+	</body>
+</html>
