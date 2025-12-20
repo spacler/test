@@ -79,12 +79,13 @@
 			</div>
 
 			<div class="box-button-2">
-				<button class="button-app-2" id="bTnf4">F4 – Wstecz</button>
-				<button class="button-app-2" id="bTnf8">F8 – Następny</button>
-			</div>
-		</div>
-		<script>
-			document.getElementById('btnF2').onclick = () => {
+    <button class="button-app-2" id="bTnf4">F4 – Wstecz</button>
+    <button class="button-app-2 logout" id="btnLogout">Wyloguj</button>
+	<button class="button-app-2" id="bTnf8">F8 – Następny</button>
+            </div>
+
+		<script>			
+            document.getElementById('btnF2').onclick = () => {
 				// przejście do drugiego dokumentu
 				window.location.href = 'testaptshort.html';
 			};
@@ -96,6 +97,10 @@
 				// przejście do drugiego dokumentu
 				window.location.href = 'testMenupsiOne.html';
 			};
+			document.getElementById('btnLogout').onclick = () => {
+                // TU PODAJ PLIK, DO KTÓREGO MA WRACAĆ
+                window.location.href = 'testlogowanie1.html';
+    };
 		</script>
 	</body>
 </html>
