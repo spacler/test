@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Menu</title>
+
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			html,
+			body {
+				margin: 0;
+				width: 100%;
+				height: 100%;
+				overflow: hidden; /* BLOKADA SCROLLA */
+				font-family: Arial, sans-serif;
+				background: #f3f3f3;
+			}
+
+			/* CAŁY EKRAN */
+			.conteiner {
+				width: 100%;
+				height: 100%;
+				background: white;
+				display: flex;
+				flex-direction: column;
+				padding: 12px;
+			}
+
+			/* F1–F3 */
+			.box-button-1 {
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
+			}
+
+			.button-app-1 {
+				padding: 14px;
+				border: 2px solid #000;
+				border-radius: 10px;
+				font-size: 15px;
+				font-weight: bold;
+				text-align: center;
+				background: #fafafa;
+			}
+
+			/* DOLNE PRZYCISKI */
+			.box-button-2 {
+				margin-top: auto; /* PRZYKLEJENIE DO DOŁU */
+				display: flex;
+				gap: 12px;
+			}
+
+			.button-app-2 {
+				flex: 1;
+				padding: 14px;
+				border: 2px solid #000;
+				border-radius: 10px;
+				font-size: 15px;
+				font-weight: bold;
+				text-align: center;
+				background: #eaeaea;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="conteiner">
+			<div class="box-button-1">
+				<button class="button-app-1" id="btnF1">F1 - Przyjęcie nieawizowane</button>
+				<button class="button-app-1" id="btnF2">F2 - Przyjęcie PTE</button>
+				<button class="button-app-1" id="btnF3">F3 - Info o JT</button>
+				<button class="button-app-1" id="btnF5">F5 - Zasoby na JT</button>
+				<button class="button-app-1" id="btnF6">F6 - Info o art.</button>
+			</div>
+
+			<div class="box-button-2">
+				<button class="button-app-2" id="bTnf4">F4 – Wstecz</button>
+				<button class="button-app-2" id="bTnf8">F8 – Następny</button>
+			</div>
+		</div>
+		<script>
+			document.getElementById('bTnf4').onclick = () => {
+				// przejście do drugiego dokumentu
+				window.location.href = 'shortpickmenu.html';
+			};
+		</script>
+	</body>
+</html>
