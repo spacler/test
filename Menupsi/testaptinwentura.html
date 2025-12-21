@@ -93,8 +93,7 @@
 
 					<div class="box2">
 						<button id="btnF4" class="f">F4 = X</button>
-						<button class="f">Enter</button>
-						<button class="f">F2 = Automatyczna inwentaryzacja</button>
+						<button class="f" onclick="checkLista()">Enter</button>
 						<button id="btnF6" class="f">F6 = Lista inwentaryzacyjna</button>
 						<button id="btnF5" class="f">F5 = Miejsce</button>
 					</div>
@@ -116,6 +115,20 @@
 						listaInput.value = ''; // ← czyści pole
 						listaInput.focus(); // ← kursor miga
 					};
+
+					function checkLista() {
+						if (listaInput.value === '198999') {
+							window.location.href = 'oczkaDoinwentaryzacji.html';
+						} else {
+							alert('Lista nie istnieje');
+						}
+					}
+
+					document.addEventListener('keydown', (e) => {
+						if (e.key === 'Enter') {
+							checkLista();
+						}
+					});
 				</script>
 			</body>
 		</html>
