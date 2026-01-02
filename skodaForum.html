@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			.hero-header {
+				position: relative;
+				height: 260px;
+				background: url('fabia-bg.jpg') center/cover no-repeat;
+				color: #fff;
+				font-family: system-ui, Arial, sans-serif;
+			}
+
+			.hero-overlay {
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35));
+			}
+
+			.hero-content {
+				position: relative;
+				height: 100%;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				backdrop-filter: blur(6px);
+			}
+
+			/* LOGO + TYTUŁ */
+			.brand {
+				display: flex;
+				align-items: center;
+				gap: 14px;
+			}
+
+			.brand img {
+				width: 52px;
+				height: 52px;
+				background: #fff;
+				border-radius: 12px;
+				padding: 6px;
+			}
+
+			.brand h1 {
+				margin: 0;
+				font-size: 26px;
+				font-weight: 700;
+				letter-spacing: 0.5px;
+			}
+
+			.brand span {
+				font-size: 13px;
+				opacity: 0.9;
+			}
+
+			/* MENU */
+			.hero-nav {
+				display: flex;
+				gap: 12px;
+				flex-wrap: wrap;
+			}
+
+			.hero-nav a {
+				text-decoration: none;
+				color: #fff;
+				padding: 8px 14px;
+				border-radius: 999px;
+				background: rgba(255, 255, 255, 0.15);
+				backdrop-filter: blur(10px);
+				transition: all 0.2s ease;
+				font-size: 14px;
+			}
+
+			.hero-nav a:hover {
+				background: #2ecc71;
+				color: #000;
+			}
+
+			/* MOBILE */
+			@media (max-width: 600px) {
+				.hero-header {
+					height: 220px;
+				}
+
+				.brand h1 {
+					font-size: 20px;
+				}
+			}
+			.main-wrap {
+				padding: 24px;
+				background: #0e0e0e;
+				color: #fff;
+				font-family: system-ui, Arial, sans-serif;
+			}
+
+			/* WELCOME */
+			.welcome-card {
+				background: rgba(255, 255, 255, 0.08);
+				backdrop-filter: blur(10px);
+				border-radius: 18px;
+				padding: 24px;
+				margin-bottom: 28px;
+				border: 1px solid rgba(255, 255, 255, 0.12);
+			}
+
+			.welcome-card h2 {
+				margin: 0 0 10px;
+				font-size: 24px;
+			}
+
+			.welcome-card p {
+				margin: 0 0 18px;
+				font-size: 15px;
+				opacity: 0.9;
+			}
+
+			.welcome-actions {
+				display: flex;
+				gap: 12px;
+				flex-wrap: wrap;
+			}
+
+			/* BUTTONS */
+			.btn {
+				padding: 10px 18px;
+				border-radius: 999px;
+				border: none;
+				font-size: 14px;
+				cursor: pointer;
+				transition: transform 0.15s, background 0.2s;
+			}
+
+			.btn.primary {
+				background: #2ecc71;
+				color: #000;
+			}
+
+			.btn.ghost {
+				background: transparent;
+				border: 1px solid rgba(255, 255, 255, 0.3);
+				color: #fff;
+			}
+
+			.btn:hover {
+				transform: translateY(-1px);
+			}
+
+			/* GRID */
+			.cards-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 16px;
+			}
+
+			/* CARD */
+			.card {
+				background: rgba(255, 255, 255, 0.06);
+				backdrop-filter: blur(8px);
+				border-radius: 16px;
+				padding: 18px;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				transition: transform 0.2s, box-shadow 0.2s;
+			}
+
+			.card h3 {
+				margin: 0 0 6px;
+				font-size: 17px;
+			}
+
+			.card p {
+				margin: 0;
+				font-size: 14px;
+				opacity: 0.85;
+			}
+
+			.card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+			}
+
+			/* WYRÓŻNIONA */
+			.card.highlight {
+				background: linear-gradient(135deg, #2ecc71, #27ae60);
+				color: #000;
+			}
+
+			/* MOBILE */
+			@media (max-width: 600px) {
+				.main-wrap {
+					padding: 16px;
+				}
+
+				.welcome-card h2 {
+					font-size: 20px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header class="hero-header">
+			<div class="hero-overlay"></div>
+
+			<div class="hero-content">
+				<div class="brand">
+					<img src="logo-fabia.svg" alt="Fabia I" />
+					<div>
+						<h1>Skoda Fabia I</h1>
+						<span>Forum • Diagnostyka • Naprawy • Tuning</span>
+					</div>
+				</div>
+
+				<nav class="hero-nav">
+					<a href="#">Start</a>
+					<a href="#">Silnik</a>
+					<a href="#">Elektryka</a>
+					<a href="#">Zawieszenie</a>
+					<a href="#">Galeria</a>
+				</nav>
+			</div>
+		</header>
+		<main class="main-wrap">
+			<section class="welcome-card">
+				<h2>Witaj na forum Skoda Fabia I</h2>
+				<p>Miejsce dla właścicieli i pasjonatów Fabii I (1999–2007). Diagnostyka, naprawy, modyfikacje i realna pomoc.</p>
+				<div class="welcome-actions">
+					<button class="btn primary">Zarejestruj się</button>
+					<button class="btn ghost">Przeglądaj forum</button>
+				</div>
+			</section>
+
+			<section class="cards-grid">
+				<div class="card">
+					<h3>🔧 Diagnostyka</h3>
+					<p>Błędy, OBD, ELM327, OP-COM, VCDS.</p>
+				</div>
+
+				<div class="card">
+					<h3>⚙️ Naprawy</h3>
+					<p>Silniki MPI, HTP, TDI – krok po kroku.</p>
+				</div>
+
+				<div class="card">
+					<h3>🚗 Tuning</h3>
+					<p>Zawieszenie, felgi, wizual i mody.</p>
+				</div>
+
+				<div class="card highlight">
+					<h3>💬 Najnowsze tematy</h3>
+					<p>Sprawdź co nowego na forum.</p>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
