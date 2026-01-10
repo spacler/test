@@ -1,9 +1,38 @@
-function kupTeraz() {
-  alert("Dziękujemy za zainteresowanie! Skontaktujemy się w celu finalizacji zamówienia.");
+const form = document.getElementById('commentForm');
+const list = document.getElementById('commentList');
+
+const nameInput = form.querySelector('[name="name"]');
+const textInput = form.querySelector('[name="text"]');
+
+async function loadComments() {
+	const res = await fetch('/api/comments');
+	const data = await res.json();
+	list.innerHTML = '';
+
+	data.forEach((c) => {
+		list.innerHTML += `
+      <div class="comment">
+        <strong>${c.name}</strong><br/>
+        ${c.text}
+      </div>
+    `;
+	});
 }
 
-document.getElementById("kontakt").addEventListener("submit", function(e) {
-  e.preventDefault();
-  alert("Dziękujemy za wiadomość! Skontaktujemy się z Tobą wkrótce.");
-  this.reset();
+form.addEventListener('submit', async (e) => {
+	e.preventDefault();
+
+	await fetch('/api/comments', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify({
+			name: nameInput.value,
+			text: textInput.value,
+		}),
+	});
+
+	form.reset();
+	loadComments();
 });
+
+loadComments();
