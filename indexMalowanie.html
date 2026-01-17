@@ -5,68 +5,67 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<style>
-					* {
+			* {
 				margin: 0;
-							padding: 0;
-							box-sizing: border-box;
-						}
-
-						html,
-						body {
-							height: 100%;
-							font-family: Arial, Helvetica, sans-serif;
-						}
-
-						.page {
-				background-image:
-					linear-gradient(
-						rgba(0, 0, 0, 0.45),
-						rgba(0, 0, 0, 0.45)
-					),
-					url(images/to-paint-2924891.jpg);
-
-				background-size: cover;
-				background-position: center;
+				padding: 0;
+				box-sizing: border-box;
 			}
 
+			html,
+			body {
+				height: 100%;
+				font-family: Arial, Helvetica, sans-serif;
+			}
 
+			.page {
+				min-height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				padding: 15px;
+			}
 
-						/* GŁÓWNY KONTENER */
-						.container {
-				        background: rgba(255, 255, 255, 0.85);
-				        backdrop-filter: blur(8px);
+			/* GŁÓWNY KONTENER */
+			.container {
+				width: 100%;
+				max-width: 1100px;
+				margin: 40px auto;
+				padding: 0;
+				position: relative;
+
+				background: rgba(255, 255, 255, 0.85);
+				backdrop-filter: blur(8px);
 				-webkit-backdrop-filter: blur(8px);
+				border-radius: 18px;
 
 				box-shadow:
 					0 25px 50px rgba(0, 0, 0, 0.35),
 					0 0 0 1px rgba(255, 255, 255, 0.5);
 			}
 
+			.container::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				border-radius: 18px;
+				pointer-events: none;
+				box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+			}
 
-						.container::before {
-							content: '';
-							position: absolute;
-							inset: 0;
-							border-radius: 18px;
-							pointer-events: none;
-							box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
-						}
+			/* HEADER */
+			.header {
+				background: linear-gradient(to right, #f7f7f7, #ffffff);
+				border-bottom: 1px solid #e5e5e5;
+			}
 
-						/* HEADER */
-						.header {
-							background: linear-gradient(to right, #f7f7f7, #ffffff);
-							border-bottom: 1px solid #e5e5e5;
-						}
-
-						.header h1 {
-			                text-align: center;
-			                margin-top: 15px;
-							margin-bottom: 15px;
-			                position: relative;
-
-						}
-			            .header h1::after {
-				                       content: "";
+			.header h1 {
+				text-align: center;
+				margin-top: 15px;
+				margin-bottom: 15px;
+				position: relative;
+			}
+			.header h1::after {
+				content: '';
 				display: block;
 				width: 80px;
 				height: 4px;
@@ -75,16 +74,16 @@
 				border-radius: 5px;
 			}
 
-						.nav {
-							display: flex;
-							justify-content: center;
-							gap: 20px;
-							flex-wrap: wrap;
-						}
+			.nav {
+				display: flex;
+				justify-content: center;
+				gap: 20px;
+				flex-wrap: wrap;
+			}
 
-						.nav a {
-			                text-decoration: none;
-			                color: black;
+			.nav a {
+				text-decoration: none;
+				color: black;
 				padding: 8px 14px;
 				border-radius: 20px;
 				transition: 0.25s;
@@ -94,54 +93,42 @@
 				color: #fff;
 				box-shadow: 0 5px 15px rgba(255, 152, 0, 0.4);
 			}
-						/* MAIN */
-						.main {
-							flex: 1;
-							padding: 30px;
-						}
+			/* MAIN */
+			.main {
+				flex: 1;
+				padding: 30px;
+			}
 
-						.main section {
+			.main section {
 				background: rgba(255, 255, 255, 0.75);
 				border-radius: 14px;
 				padding: 25px;
 				margin-bottom: 25px;
 
-				box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+				box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 			}
 
+			.main section:last-child {
+				border-bottom: none;
+			}
 
-						.main section:last-child {
-							border-bottom: none;
-						}
+			.main h2 {
+				margin-bottom: 15px;
+				color: #444;
+			}
 
-						.main h2 {
-							margin-bottom: 15px;
-							color: #444;
-						}
+			/* FOOTER */
+			.footer {
+				color: #555;
+				font-size: 14px;
+			}
 
-						/* FOOTER */
-						.footer {
-							text-align: center;
-							padding: 15px;
-							background: linear-gradient(to right, #eee, #fafafa);
-				color: #555
-							font-size: 14px;
-						}
-
-						/* RESPONSYWNOŚĆ */
-						@media (max-width: 768px) {
-							.container {
-								width: 100%;
-							}
-
-							.main {
-								padding: 20px;
-							}
-
-							.nav {
-								gap: 10px;
-							}
-						}
+			/* RESPONSYWNOŚĆ */
+			@media (max-width: 768px) {
+				.main {
+					padding: 20px 15px;
+				}
+			}
 		</style>
 	</head>
 	<body>
