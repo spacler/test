@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usługi Fachowca - Mechanika, Hydraulika, Malowanie</title>
+    <link rel="stylesheet" href="gem2.css">
+  <style>
+    /* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.contact {
+    background: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+button {
+    background: #e67e22;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d35400;
+  }
+    
+  </style>
+</head>
+<body>
+
+    <header>
+        <h1>Jan Kowalski - Wolny Strzelec</h1>
+        <p>Szybka pomoc domowa i mechaniczna</p>
+    </header>
+
+    <section class="services">
+        <div class="service-card">
+            <div class="icon">🚗</div>
+            <h3>Mechanika Pojazdowa</h3>
+            <p>Drobne naprawy, wymiana filtrów, olejów i żarówek.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">🚰</div>
+            <h3>Hydraulika Domowa</h3>
+            <p>Naprawa kranów, udrażnianie rur, montaż syfonów.</p>
+        </div>
+
+        <div class="service-card">
+            <div class="icon">🎨</div>
+            <h3>Malowanie Wnętrz</h3>
+            <p>Odświeżanie ścian, szpachlowanie i malowanie precyzyjne.</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Potrzebujesz pomocy?</h2>
+        <p>Zadzwoń do mnie: <strong>+48 123 456 789</strong></p>
+        <button onclick="showAlert()">Wyślij zapytanie</button>
+    </section>
+
+    <script > // script.js
+function showAlert() {
+    alert("Dziękuję za zainteresowanie! Funkcja formularza zostanie wkrótce dodana.");
+}
+    </script>
+</body>
+</html>
