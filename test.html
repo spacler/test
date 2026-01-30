@@ -1,194 +1,358 @@
 <!DOCTYPE html>
 <html lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Wolny Strzelec</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+	<div class="container">
+		<div class="logo">Wolny<span>Strzelec</span></div>
+
+		<nav class="nav">
+	<div class="nav-links">
+		<a href="#">Usługi</a>
+		<a href="#" id="termsBtn">Regulamin</a>
+		<a href="#">Kontakt</a>
+	</div>
+
+	<div class="nav-actions">
+		<button class="user-btn" id="userMenuBtn" aria-label="Menu użytkownika">
+			<img src="https://cdn-icons-png.flaticon.com/512/1995/1995539.png" alt="Mechanik" />
+		</button>
+
+		<button class="hamburger" id="hamburgerBtn">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
+</nav>
+
+
+</header>
+<div class="user-menu hidden" id="userMenu">
+	<div class="guest-only">
+		<a href="#" id="loginBtn">Zaloguj się</a>
+		<a href="#" id="registerBtn">Zarejestruj</a>
+	</div>
+
+	<div class="auth-only hidden">
+		<p id="userEmail"></p>
+		<a href="#" id="logoutBtn">Wyloguj</a>
+	</div>
+</div>
+
+<div class="mobile-menu hidden" id="mobileMenu">
+	<a href="#">Zlecenia</a>
+	<a href="#">Freelancerzy</a>
+
+	<div class="guest-only">
+		<a href="#" id="loginBtnMobile">Zaloguj się</a>
+		<a href="#" id="registerBtnMobile">Zarejestruj</a>
+	</div>
+
+	<div class="auth-only hidden">
+		<p id="userEmailMobile"></p>
+		<a href="#" id="logoutBtnMobile">Wyloguj</a>
+	</div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+
+	<section class="categories-block">
+
+		<div class="categories-intro">
+			<h2>Mobilny mechanik z dojazdem do klienta</h2>
+			<p>
+				Nie masz czasu na warsztat lub auto odmówiło posłuszeństwa?
+				Wykonuję diagnostykę i drobne naprawy na miejscu.
+				Poniżej zakres usług, które realizuję.
+			</p>
+		</div>
+
+		<div class="categories-grid">
+			<a href="#" class="category-tile">
+				<span class="icon">🔧</span>
+				<h3>Mechanika</h3>
+				<p>Szybkie i solidne naprawy mechaniczne bez warsztatu</p>
+			</a>
+
+			<a href="#" class="category-tile">
+				<span class="icon">💻</span>
+				<h3>Diagnostyka</h3>
+				<p>Precyzyjna diagnostyka komputerowa i testy</p>
+			</a>
+
+			<a href="#" class="category-tile">
+				<span class="icon">🛢️</span>
+				<h3>Wymiana oleju</h3>
+				<p>Wymiana oleju i filtrów zgodnie z zaleceniami</p>
+			</a>
+
+			<a href="#" class="category-tile">
+				<span class="icon">🛑</span>
+				<h3>Hamulce</h3>
+				<p>Skuteczne hamowanie i pełne bezpieczeństwo</p>
+			</a>
+
+			<a href="#" class="category-tile">
+				<span class="icon">🛞</span>
+				<h3>Zawieszenie</h3>
+				<p>Stabilność, komfort i pewne prowadzenie</p>
+			</a>
+
+			<a href="#" class="category-tile full-width">
+	<span class="icon">❄️</span>
+	<h3>Klimatyzacja</h3>
+	<p>Sprawna i wydajna klimatyzacja</p>
+</a>
+
+		</div>
+
+	</section>
+
+	
+
+</section>
+
+<!-- ================= OPIS USŁUG ================= -->
+<section class="categories-block">
+
+	<div class="categories-intro">
+		<h2>Szczegóły usług</h2>
+		<p>
+			Poniżej znajdziesz szczegółowy opis zakresu usług,
+			które wykonuję jako mobilny mechanik z dojazdem do klienta.
+		</p>
+	</div>
+
+	<div class="categories-grid details-grid">
+
+		<div class="category-tile">
+			<span class="icon">🔧</span>
+			<h3>Mechanika</h3>
+			<p>
+				Wykonuję naprawy bieżące oraz bardziej zaawansowane prace mechaniczne.
+				Diagnozuję usterki, wymieniam zużyte elementy i przywracam sprawność auta.
+			</p>
+		</div>
+
+		<div class="category-tile">
+			<span class="icon">💻</span>
+			<h3>Diagnostyka</h3>
+			<p>
+				Diagnostyka komputerowa pozwala szybko wykryć źródło problemu.
+				Odczytuję błędy, analizuję parametry i kasuję usterki po naprawie.
+			</p>
+		</div>
+
+		<div class="category-tile">
+			<span class="icon">🛢️</span>
+			<h3>Wymiana oleju</h3>
+			<p>
+				Wymieniam olej silnikowy oraz filtry zgodnie z zaleceniami producenta.
+				Pomagam dobrać odpowiedni olej do danego silnika i przebiegu.
+			</p>
+		</div>
+
+		<div class="category-tile">
+			<span class="icon">🛑</span>
+			<h3>Hamulce</h3>
+			<p>
+				Zajmuję się serwisem układu hamulcowego – klocki, tarcze
+				oraz kontrola skuteczności hamowania dla pełnego bezpieczeństwa.
+			</p>
+		</div>
+
+		<div class="category-tile">
+			<span class="icon">🛞</span>
+			<h3>Zawieszenie</h3>
+			<p>
+				Usuwam luzy, stuki i zużycie elementów zawieszenia.
+				Poprawiam komfort jazdy oraz stabilność prowadzenia auta.
+			</p>
+		</div>
+
+		<div class="category-tile">
+			<span class="icon">❄️</span>
+			<h3>Klimatyzacja</h3>
+			<p>
+				Oferuję serwis klimatyzacji, nabijanie czynnika
+				oraz kontrolę szczelności dla skutecznego chłodzenia.
+			</p>
+		</div>
+
+	</div>
+</section>
+
+<section class="map-section">
+	<h2>Moja lokalizacja</h2>
+	<div id="map"></div>
+</section>
+
+<!-- ================= KOMENTARZE ================= -->
+<section class="comments auth-only hidden">
+	<h2>Komentarze</h2>
+
+	<form id="commentForm">
+		<input
+			type="text"
+			name="name"
+			placeholder="Twoje imię"
+			required
 		/>
-		<title>Poprawiony układ panelu shortpick</title>
 
-		<style>
-			body {
-				margin: 0;
-				height: 100vh;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				background: #f3f3f3;
-				font-family: Arial, sans-serif;
-			}
-
-			/* CONTAINER */
-			.conteiner {
-				width: 360px;
-				max-width: 95vw;
-				min-height: 600px;
-				border: 2px solid black;
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-start;
-				align-items: center;
-				padding: 15px;
-				box-sizing: border-box;
-				background: white;
-				border-radius: 12px;
-				position: relative; /* ← WAŻNE! */
-			}
-
-			/* BOXY */
-			.box {
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				gap: 10px;
-			}
-			.g-input {
-				border: 1px solid black;
-				padding: 12px;
-				padding-left: 12px; /* tekst zaczyna się z lewej */
-				text-align: left; /* tekst i placeholder od lewej */
-				font-weight: bold;
-				background: white;
-				border-radius: 6px;
-				font-size: 16px;
-				width: 100%;
-				box-sizing: border-box;
-			}
-
-			/* GRID */
-			.box2 {
-				width: 100%;
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: 10px;
-				margin-top: 20px;
-			}
-			.f {
-				border: 1px solid black;
-				padding: 12px;
-				text-align: center;
-				background: rgb(77, 76, 76);
-				color: white;
-				border-radius: 6px;
-				font-size: 14px;
-				cursor: pointer;
-				user-select: none;
-			}
-
-			/* PRZYCISK F7 W PRAWYM DOLNYM ROGU CONTAINER */
-			.f7 {
-				position: absolute;
-				bottom: 15px;
-				right: 15px;
-				width: calc(50% - 20px);
-				text-align: center;
-			}
-
-			.f:active {
-				transform: scale(0.97);
-				background: #e0e0e0;
-			}
-
-			/* MODAL */
-			.modal-bg {
-				display: none;
-				position: fixed;
-				inset: 0;
-				background: rgba(0, 0, 0, 0.15);
-				justify-content: center;
-				align-items: center;
-			}
-			.modal {
-				background: white;
-				padding: 25px;
-				width: 320px;
-				border-radius: 12px;
-				border: 1px solid black;
-				text-align: center;
-			}
-			.modal-buttons {
-				display: flex;
-				justify-content: center;
-				gap: 20px;
-				margin-top: 15px;
-			}
-		</style>
-	</head>
-
-	<body>
-		<div class="conteiner">
-			<div class="box">
-				<input
-					class="g-input"
-					id="miejsceInput"
-					placeholder="Miejsce"
-				/>
-
-				<input
-					class="g-input"
-					id="listaInput"
-					placeholder="Lista inwentaryzacyjna"
-				/>
-			</div>
-
-			<div class="box2">
-				<button class="f">F4 = X</button>
-				<button class="f">Enter</button>
-				<button class="f">F2 = Automatyczna inwentaryzacja</button>
-				<button class="f">F6 = Lista inwentaryzacyjna</button>
-				<button class="f">F5 = Miejsce</button>
-			</div>
-
-			<!-- JEDEN prawidłowy przycisk F7 -->
-			<button
-				id="utworzBtn"
-				class="f f7"
-			>
-				F7 = Utwórz
-			</button>
+		<div class="stars" id="starRating">
+			<span class="star" data-value="1">★</span>
+			<span class="star" data-value="2">★</span>
+			<span class="star" data-value="3">★</span>
+			<span class="star" data-value="4">★</span>
+			<span class="star" data-value="5">★</span>
 		</div>
 
-		<!-- MODAL -->
-		<div
-			class="modal-bg"
-			id="modalBg"
-		>
-			<div class="modal">
-				<div class="modal-text">Czy na pewno chcesz kontynuować?</div>
-				<div class="modal-buttons">
-					<button
-						class="modal-btn"
-						id="btnTak"
-					>
-						Tak
-					</button>
-					<button
-						class="modal-btn"
-						id="btnNie"
-					>
-						F4 = X
-					</button>
-				</div>
-			</div>
-		</div>
+		<textarea
+			name="text"
+			placeholder="Napisz komentarz..."
+			required
+		></textarea>
 
-		<script>
-			// Otwórz okienko
-			document.getElementById('utworzBtn').onclick = () => {
-				document.getElementById('modalBg').style.display = 'flex';
-			};
+		<button type="submit">Dodaj komentarz</button>
+	</form>
 
-			// Zamknij
-			document.getElementById('btnNie').onclick = () => {
-				document.getElementById('modalBg').style.display = 'none';
-			};
+	<div id="commentList"></div>
+</section>
 
-			// Potwierdź
-			document.getElementById('btnTak').onclick = () => {
-				alert('Listy zostały utworzone');
-				document.getElementById('modalBg').style.display = 'none';
-			};
-		</script>
-	</body>
+<section class="comments guest-only">
+	<h2>Dodawanie komentarzy</h2>
+	<p style="text-align:center;margin-top:20px;">
+		Musisz być zalogowany, aby dodać komentarz.
+	</p>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="footer" class="footer">
+	<div class="footer-container">
+		<h3>Kontakt</h3>
+		<p><strong>Wolny Strzelec</strong></p>
+		<p>ul. Przykładowa 12</p>
+		<p>62-800 Kalisz</p>
+		<p>📞 +48 600 000 000</p>
+		<p>📧 kontakt@wolnystrzelec.pl</p>
+
+		<p class="footer-copy">
+			© 2026 Wolny Strzelec
+		</p>
+	</div>
+</footer>
+
+<!-- ================= MODAL LOGOWANIA ================= -->
+<div id="authModal" class="modal">
+	<div class="modal-box">
+		<h2 id="modalTitle">Zaloguj się</h2>
+
+		<form id="authForm">
+	<div class="field">
+		<input type="text" id="firstName" required placeholder=" " />
+		<label>Imię</label>
+	</div>
+
+	<div class="field">
+		<input type="text" id="lastName" required placeholder=" " />
+		<label>Nazwisko</label>
+	</div>
+
+	<div class="field">
+		<input type="email" id="email" required placeholder=" " />
+		<label>Email</label>
+	</div>
+	<ul class="email-rules">
+	<li id="rule-email">Poprawny adres email</li>
+</ul>
+
+	<div class="field">
+		<input type="password" id="password" minlength="6" required placeholder=" " />
+		<label>Hasło</label>
+	</div>
+	<ul class="password-rules">
+	<li id="rule-length">Min. 8 znaków</li>
+	<li id="rule-upper">1 duża litera</li>
+</ul>
+
+
+	<div class="field">
+		<input type="password" id="password2" minlength="6" required placeholder=" " />
+		<label>Powtórz hasło</label>
+	</div>
+
+	<p class="password-match hidden" id="passwordMatch">
+	Hasła się nie zgadzają
+</p>
+
+
+	<label class="checkbox">
+		<input type="checkbox" id="terms" />
+		<span>Akceptuję <a href="#" id="termsLink">regulamin</a></span>
+	</label>
+
+	<button type="submit" id="authSubmit">Zarejestruj</button>
+</form>
+
+
+		<p class="form-error hidden" id="authError"></p>
+
+		<p class="switch">
+			Nie masz konta?
+			<a href="#" id="switchMode">Zarejestruj się</a>
+		</p>
+	</div>
+</div>
+
+<div id="cookieBanner" class="cookie-banner hidden">
+	<p>
+		Ta strona wykorzystuje pliki cookies w celach technicznych
+		(logowanie, komentarze, statystyki).
+		<a href="#" id="openCookiesInfo" class="cookie-link">
+			Dowiedz się więcej
+		</a>
+	</p>
+	<button id="acceptCookies">Akceptuję</button>
+</div>
+
+<div id="termsModal" class="modal">
+	<div class="modal-box" style="max-width:600px;">
+		<h2>Regulamin serwisu</h2>
+
+		<p><strong>1. Informacje ogólne</strong><br>
+		Serwis służy do prezentacji usług mobilnego mechanika
+		oraz umożliwia dodawanie komentarzy przez zarejestrowanych użytkowników.</p>
+
+		<p><strong>2. Konto użytkownika</strong><br>
+		Rejestracja jest dobrowolna. Użytkownik zobowiązuje się do podawania
+		prawdziwych danych.</p>
+
+		<p><strong>3. Odpowiedzialność</strong><br>
+		Właściciel serwisu nie ponosi odpowiedzialności za przerwy w działaniu
+		serwisu wynikające z przyczyn technicznych.</p>
+
+		<p><strong>4. Cookies</strong><br>
+		Serwis wykorzystuje pliki cookies w celach technicznych i statystycznych.</p>
+
+		<p><strong>5. Postanowienia końcowe</strong><br>
+		Korzystanie z serwisu oznacza akceptację regulaminu.</p>
+	</div>
+</div>
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel admina</title>
+  <style>
+    body {
+      background:#0f172a;
+      color:#e5e7eb;
+      font-family: system-ui;
+      padding:40px;
+    }
+    input, button {
+      padding:10px;
+      margin:6px 0;
+    }
+    button {
+      cursor:pointer;
+    }
+    .comment {
+      background:#020617;
+      border:1px solid #1e293b;
+      padding:14px;
+      border-radius:10px;
+      margin-bottom:12px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🔐 Panel admina</h1>
+
+<input type="password" id="password" placeholder="Hasło admina" />
+<br/>
+<button onclick="loadComments()">Zaloguj</button>
+<button onclick="clearAll()">🧨 Usuń wszystkie</button>
+
+<hr/>
+
+<div id="list"></div>
+
+<script src="admin.js"></script>
+</body>
+</html>
