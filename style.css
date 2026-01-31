@@ -1255,3 +1255,8 @@ button.loading {
 		border-radius: 0;
 	}
 }
+@media (hover: none) {
+	body {
+		background-attachment: scroll;
+	}
+}
