@@ -1225,36 +1225,33 @@ button.loading {
 		padding: 24px 18px;
 	}
 }
-
-@media (max-width: 768px) {
-
+@media (max-width: 768px) and (orientation: portrait) {
 	.modal {
-		position: fixed;
-		inset: 0;
-
-		overflow-y: auto;                  /* scroll palcem */
-		-webkit-overflow-scrolling: touch;
-
-		padding-top: 24px;                 /* margines od góry */
-		padding-bottom: 24px;
-
-		align-items: unset;                /* zabija flex-center */
+		align-items: flex-start;
+		padding: 24px 0;
 	}
 
-	/* ukrycie scrollbara */
-	.modal {
+	.modal-box {
+		margin: 0 auto;
+		max-height: calc(100dvh - 48px);
+		overflow-y: auto;
 		scrollbar-width: none;
 	}
-	.modal::-webkit-scrollbar {
+
+	.modal-box::-webkit-scrollbar {
 		display: none;
 	}
+}
+@media (max-width: 768px) and (orientation: landscape) {
+	.modal {
+		align-items: flex-start;
+		padding: 0;
+	}
 
-	.modal-content {
-		margin: 0 auto;                    /* centruje w poziomie */
+	.modal-box {
 		width: 100%;
-		max-width: 420px;
-
-		transform: none !important;        /* jeśli było */
-		top: auto;
+		max-width: none;
+		min-height: 100vh;
+		border-radius: 0;
 	}
 }
