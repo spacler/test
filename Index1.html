@@ -1235,6 +1235,46 @@ button.loading {
 		opacity: 1;
 	}
 }
+	/* Celujemy w telefony i tablety w orientacji poziomej */
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    
+    /* 1. Logo do lewej */
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        margin-right: auto; /* Popycha resztę elementów w prawo */
+    }
+
+    /* 2. Ukrywamy Avatar (User Menu Btn) */
+    #userMenuBtn {
+        display: none !important;
+    }
+
+    /* 3. Wyświetlamy linki nawigacyjne w rzędzie */
+    .nav-links {
+        display: flex !important;
+        gap: 15px;
+        margin-right: 20px;
+    }
+
+    /* 4. Ukrywamy hamburgera, jeśli linki są widoczne */
+    #hamburgerBtn {
+        display: none;
+    }
+
+    /* 5. Stylowanie linków, aby wyglądały dobrze w headerze */
+    .nav-links a {
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: inherit;
+        white-space: nowrap;
+    }
+}
+	
 </style>
 
 </head>
