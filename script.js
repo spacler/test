@@ -445,3 +445,33 @@ if (document.getElementById('map')) {
 		map.invalidateSize();
 	}, 300);
 }
+	
+/*Naprawa modala/*
+/* ================== NAPRAWA MODALI I MENU ================== */
+
+// 1. Obsługa przycisku zamykania w modalu logowania/rejestracji
+document.getElementById('closeAuth')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeModal(); // Korzystamy z Twojej istniejącej funkcji
+});
+
+// 2. Obsługa przycisku zamykania w modalu regulaminu
+document.getElementById('closeTerms')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('termsModal').classList.remove('active');
+});
+
+// 3. Automatyczne zamykanie menu mobilnego po kliknięciu w link (żeby nie zasłaniało strony)
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.add('hidden');
+    });
+});
+
+// 4. Dodatkowe zabezpieczenie: Zamknij regulamin klikając w tło poza okienkiem
+document.getElementById('termsModal')?.addEventListener('click', (e) => {
+    if (e.target.id === 'termsModal') {
+        document.getElementById('termsModal').classList.remove('active');
+    }
+});
+
