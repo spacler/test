@@ -1205,37 +1205,3 @@ button.loading {
 		opacity: 1;
 	}
 }
-
-@media (max-width: 480px) {
-	.categories-block {
-		padding: 60px 16px;
-	}
-
-	.category-tile {
-		padding: 24px 18px;
-	}
-}
-
-@media (max-width: 480px) {
-	.modal {
-		background: rgba(2, 6, 23, 0.2);
-	}
-
-	.modal-box {
-		max-width: calc(100% - 32px);
-		padding: 24px 18px;
-	}
-}
-
-@media (max-width: 767px) and (orientation: landscape) {
-	.modal {
-		align-items: flex-start;
-		padding-top: 64px;
-	}
-
-	.modal-box {
-		padding: 20px 16px;
-		border-radius: 16px;
-	}
-}
-
