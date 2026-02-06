@@ -432,28 +432,31 @@ termsModal?.addEventListener('click', (e) => {
 });
 
 /* ================== MAPA DOJAZDU ================== */
-if (document.getElementById('map')) {
-	const map = L.map('map').setView([51.7611, 18.091], 12);
+const map = L.map('map', {
+	scrollWheelZoom: false,
+	dragging: false,
+	tap: false
+}).setView([51.761, 18.091], 12);
 
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution: '&copy; OpenStreetMap',
-	}).addTo(map);
-
-	L.marker([51.7611, 18.091]).addTo(map).bindPopup('📍 Mobilny mechanik – Kalisz ul. Łowicka 30');
-
-	setTimeout(() => {
-		map.invalidateSize();
-	}, 300);
-}
-	
-/*Naprawa modala/*
-/* ================== NAPRAWA MODALI I MENU ================== */
-
-// 1. Obsługa przycisku zamykania w modalu logowania/rejestracji
-document.getElementById('closeAuth')?.addEventListener('click', (e) => {
-    e.preventDefault();
-    closeModal(); // Korzystamy z Twojej istniejącej funkcji
+// Włącz przesuwanie TYLKO przy dwóch palcach
+map.getContainer().addEventListener('touchstart', (e) => {
+	if (e.touches.length === 2) {
+		map.dragging.enable();
+	} else {
+		map.dragging.disable();
+	}
 });
+
+map.getContainer().addEventListener('touchend', () => {
+	map.dragging.disable();
+});
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	attribution: '© OpenStreetMap'
+}).addTo(map);
+
+L.marker([51.761, 18.091]).addTo(map)
+	.bindPopup('Wolny Strzelec – mobilny mechanik');
 
 // 2. Obsługa przycisku zamykania w modalu regulaminu
 document.getElementById('closeTerms')?.addEventListener('click', (e) => {
