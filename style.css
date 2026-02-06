@@ -913,12 +913,20 @@ html {
 }
 
 #map {
-	height: 360px;
-	border-radius: 20px;
+	height: 350px;
+	border-radius: 12px;
 	border: 1px solid #1e293b;
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+	touch-action: pan-x pan-y
 }
 
+.map-info {
+	text-align: center;
+	font-size: 0.9rem;
+	color: #ccc;
+	margin-bottom: 10px;
+	opacity: 0.85;
+}
 /* ===== FIX CHECKBOX W MODALU ===== */
 .checkbox input[type='checkbox'] {
 	width: auto; /* ⬅️ COFA width:100% */
