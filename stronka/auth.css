@@ -1,0 +1,187 @@
+/* ================= AUTH PAGE ================= */
+.auth-page {
+	min-height: calc(100vh - 120px);
+	margin-top: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 60px 20px;
+	background: linear-gradient(
+		180deg,
+		rgba(2, 6, 23, 0.9),
+		rgba(2, 6, 23, 0.95)
+	);
+}
+
+/* ================= GRID ================= */
+.auth-grid {
+	max-width: 1100px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+}
+
+/* ================= CARD ================= */
+.auth-box {
+	background: transparent;
+	border: 1px solid #1e293b;
+	border-radius: 24px;
+	padding: 40px 36px;
+	box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+}
+
+.auth-box h2 {
+	font-size: 28px;
+	margin-bottom: 28px;
+	color: #38bdf8;
+	text-align: center;
+}
+
+/* ================= FORM ================= */
+.auth-box form {
+	display: grid;
+	gap: 14px;
+}
+
+.auth-box button {
+	margin-top: 10px;
+	padding: 14px;
+	border-radius: 14px;
+	border: none;
+	background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+	color: #020617;
+	font-weight: 700;
+	font-size: 15px;
+	cursor: pointer;
+	transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.auth-box button:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 12px 30px rgba(56, 189, 248, 0.4);
+}
+
+/* ================= FLOAT LABEL ================= */
+.field {
+	position: relative;
+}
+
+.field input {
+	width: 100%;
+	padding: 14px;
+	background: #ffffff;
+	border: 1px solid #cbd5f5;
+	border-radius: 12px;
+	color: #020617;
+	outline: none;
+}
+
+.field label {
+	position: absolute;
+	left: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 14px;
+	color: #64748b;
+	pointer-events: none;
+
+	/* 🔑 KLUCZ DO PROBLEMU */
+	background-color: #ffffff;
+	padding: 0 6px;
+
+	transition: all 0.2s ease;
+}
+
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.field input:focus {
+	border-color: #38bdf8;
+	box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+}
+
+.field input::placeholder {
+	color: transparent;
+}
+
+/* ================= VALIDATION ================= */
+
+/* EMAIL */
+.email-rules li {
+	color: #ef4444;
+}
+
+.email-rules li.valid {
+	color: #22c55e !important;
+}
+
+/* PASSWORD */
+.password-rules li {
+	color: #ef4444;
+}
+
+.password-rules li.valid {
+	color: #22c55e !important;
+}
+
+/* PASSWORD MATCH */
+.password-match {
+	color: #ef4444;
+	font-size: 12px;
+}
+
+.password-match.valid {
+	color: #22c55e !important;
+}
+
+.password-match.hidden {
+	display: none;
+}
+
+/* FORM ERROR */
+.form-error {
+	margin-top: 12px;
+	font-size: 14px;
+	color: #ef4444;
+	text-align: center;
+}
+
+.form-error.hidden {
+	display: none;
+}
+
+/* CHECKBOX */
+.checkbox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	width: 100%;
+	font-size: 14px;
+	color: #cbd5f5;
+	cursor: pointer;
+	flex-direction: row-reverse;
+	margin-bottom: 14px;
+}
+
+.checkbox input {
+	accent-color: #38bdf8;
+}
+
+/* ===== AUTH MOBILE COLUMN FIX ===== */
+@media (max-width: 767px) {
+	.auth-grid {
+		grid-template-columns: 1fr;
+		align-items: stretch;
+	}
+
+	.auth-box {
+		width: 100%;
+	}
+}
+

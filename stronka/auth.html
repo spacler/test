@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Logowanie / Rejestracja – xxxXXXxxx</title>
+
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="auth.css" />
+	</head>
+	<body id="top">
+		<header class="header">
+			<div class="container">
+				<div class="logo">xxx<span>XXX</span>xxx</div>
+
+				<nav class="nav">
+					<div class="nav-links">
+						<a href="index2.html#services">Usługi</a>
+						<a href="#" id="termsBtn">Regulamin</a>
+						<a href="index.html#contact">Kontakt</a>
+					</div>
+
+					<div class="nav-actions">
+						<button class="user-btn" id="userMenuBtn" aria-label="Menu użytkownika">
+							<img src="https://cdn-icons-png.flaticon.com/512/1995/1995539.png" alt="Mechanik" />
+						</button>
+
+						<ul id="userMenu" class="user-menu hidden">
+							<li class="guest-only">
+								<a href="auth.html">Zaloguj</a>
+							</li>
+							<li class="guest-only">
+								<a href="auth.html#register">Zarejestruj</a>
+							</li>
+							<li class="auth-only hidden">
+								<a href="#" id="logoutBtn">Wyloguj</a>
+							</li>
+						</ul>
+
+						<button class="hamburger" id="hamburgerBtn">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<div class="mobile-menu hidden" id="mobileMenu">
+			<a href="index.html#services">Usługi</a>
+			<a href="index.html#contact">Kontakt</a>
+
+			<div class="guest-only">
+				<a href="auth.html">Zaloguj się</a>
+				<a href="auth.html#register">Zarejestruj</a>
+			</div>
+
+			<div class="auth-only hidden">
+				<a href="#" id="logoutBtnMobile">Wyloguj</a>
+			</div>
+		</div>
+
+		<main class="auth-page">
+			<div class="auth-grid">
+				<!-- LOGOWANIE -->
+
+				<section class="auth-box" id="login">
+					<h2>Logowanie</h2>
+
+					<form id="loginForm">
+						<div class="field">
+							<input type="email" id="loginEmail" required placeholder=" " autocomplete="email" />
+							<label>Email</label>
+						</div>
+
+						<div class="field">
+							<input type="password" id="loginPassword" required placeholder=" " autocomplete="current-password" />
+							<label>Hasło</label>
+						</div>
+
+						<button type="submit">Zaloguj</button>
+					</form>
+				</section>
+
+				<!-- REJESTRACJA -->
+
+				<section class="auth-box" id="register">
+					<h2>Rejestracja</h2>
+
+					<form id="registerForm">
+						<div class="field">
+							<input type="text" id="firstName" required placeholder=" " autocomplete="given-name" />
+							<label>Imię</label>
+						</div>
+
+						<div class="field">
+							<input type="text" id="firstName" required placeholder=" " autocomplete="given-name" />
+							<label>Nazwisko</label>
+						</div>
+
+						<div class="field">
+							<input type="email" id="email" required placeholder=" " autocomplete="email" />
+							<label>Email</label>
+						</div>
+
+						<ul class="email-rules">
+							<li id="rule-email">Poprawny adres email</li>
+						</ul>
+
+						<div class="field">
+							<input type="password" id="password" required placeholder=" " autocomplete="new-password" />
+							<label>Hasło</label>
+						</div>
+
+						<ul class="password-rules">
+							<li id="rule-length">Min. 8 znaków</li>
+							<li id="rule-upper">1 duża litera</li>
+						</ul>
+
+						<div class="field">
+							<input type="password" id="password2" required placeholder=" " autocomplete="new-password" />
+							<label>Powtórz hasło</label>
+						</div>
+
+						<p class="password-match hidden" id="passwordMatch">Hasła się nie zgadzają</p>
+
+						<label class="checkbox">
+							<input type="checkbox" id="terms" />
+							<span>Akceptuję <a href="#" id="termsLink">regulamin</a></span>
+						</label>
+
+						<button type="submit">Zarejestruj</button>
+						<p class="form-error hidden" id="authError"></p>
+					</form>
+				</section>
+			</div>
+		</main>
+
+		<footer id="contact" class="footer">
+			<div class="footer-container">
+				<h3>Kontakt</h3>
+				<p>
+					<a href="#top" class="footer-logo"><strong>xxxXXXxxx</strong></a>
+				</p>
+
+				<p>ul. Przykładowa 12</p>
+				<p>62-800 Kalisz</p>
+				<p>📞 +48 600 000 000</p>
+				<p>📧 kontakt@xxxXXXxxxpl</p>
+
+				<p class="footer-copy">© 2026 xxxXXXxxx</p>
+			</div>
+		</footer>
+
+		<!-- REGULAMIN – MODAL ZOSTAJE -->
+		<div id="termsModal" class="modal">
+			<div class="modal-box">
+				<h2>Regulamin serwisu</h2>
+				<p>Treść bez zmian…</p>
+			</div>
+		</div>
+		<script src="auth.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

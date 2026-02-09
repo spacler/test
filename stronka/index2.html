@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Wolny Strzelec</title>
+	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+</head>
+<body id="top">
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+	<div class="container">
+		<div class="logo">xxx<span>XXX</span>xxx</div>
+
+		<nav class="nav">
+			<div class="nav-links">
+				<a href="index2.html#services">Usługi</a>
+				<a href="#" id="termsBtn">Regulamin</a>
+				<a href="index2.html#contact">Kontakt</a>
+			</div>
+
+			<div class="nav-actions">
+				<button class="user-btn" id="userMenuBtn" aria-label="Menu użytkownika">
+					<img
+						src="https://cdn-icons-png.flaticon.com/512/1995/1995539.png"
+						alt="Mechanik"
+					/>
+				</button>
+
+				<ul id="userMenu" class="user-menu hidden">
+					<li class="guest-only">
+						<a href="auth.html">Zaloguj</a>
+					</li>
+					<li class="guest-only">
+						<a href="auth.html#register">Zarejestruj</a>
+					</li>
+					<li class="auth-only hidden">
+						<a href="#" id="logoutBtn">Wyloguj</a>
+					</li>
+				</ul>
+
+				<button class="hamburger" id="hamburgerBtn">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+		</nav>
+	</div>
+</header>
+
+
+<div class="mobile-menu hidden" id="mobileMenu">
+	<a href="#services">Usługi</a>
+<a href="#contact">Kontakt</a>
+
+
+	<div class="guest-only">
+		<a href="auth.html">Zaloguj się</a>
+		<a href="auth.html#register">Zarejestruj</a>
+    </div>
+
+	<div class="auth-only hidden">
+		<p id="userEmailMobile"></p>
+		<a href="#" id="logoutBtnMobile">Wyloguj</a>
+	</div>
+</div>
+
+
+<!-- ================= OPIS USŁUG ================= -->
+<section class="categories-block">
+
+	<section class="intro-block">
+	<div class="intro-content">
+		<h1>Mobilny mechanik w Kaliszu – szybka naprawa auta z dojazdem</h1>
+
+		<p class="lead">
+			Dojeżdżam pod dom, firmę lub w trasę. Szybko diagnozuję usterki
+			i wykonuję naprawy bez konieczności wizyty w warsztacie.
+		</p>
+	</div>
+</section>
+<section class="services-intro">
+	<h2>Usługi mobilnego mechanika w Kaliszu</h2>
+
+	<p>
+		Wykonuję najczęściej spotykane naprawy i serwis samochodów osobowych.
+		Dzięki mobilnej mechanice oszczędzasz czas i unikasz kosztów holowania.
+	</p>
+</section>
+<div class="section-header">
+	<span class="arrow left">⬇</span>
+	<h3>Zakres wykonywanych usług</h3>
+	<span class="arrow right">⬇</span>
+</div>
+
+
+
+	<div id="services" class="categories-grid details-grid">
+
+		<div class="category-tile">
+			<span class="icon">🔧</span>
+			<h3>Mechanika</h3>
+			<p>
+				Wykonuję naprawy bieżące oraz bardziej zaawansowane prace mechaniczne.
+				Diagnozuję usterki, wymieniam zużyte elementy i przywracam sprawność auta.
+			</p>
+		</div>
+
+		<div class="category-tile">
+			<span class="icon">💻</span>
+			<h3>Diagnostyka</h3>
+			<p>
+				Diagnostyka komputerowa pozwala szybko wykryć źródło problemu.
+				Odczytuję błędy, analizuję parametry i kasuję usterki po naprawie.
+			</p>
+		</div>
+
+		<div class="category-tile">
+			<span class="icon">🛢️</span>
+			<h3>Wymiana oleju</h3>
+			<p>
+				Wymieniam olej silnikowy oraz filtry zgodnie z zaleceniami producenta.
+				Pomagam dobrać odpowiedni olej do danego silnika i przebiegu.
+			</p>
+		</div>
+
+		<div class="category-tile">
+			<span class="icon">🛑</span>
+			<h3>Hamulce</h3>
+			<p>
+				Zajmuję się serwisem układu hamulcowego – klocki, tarcze
+				oraz kontrola skuteczności hamowania dla pełnego bezpieczeństwa.
+			</p>
+		</div>
+
+		<div class="category-tile">
+			<span class="icon">🛞</span>
+			<h3>Zawieszenie</h3>
+			<p>
+				Usuwam luzy, stuki i zużycie elementów zawieszenia.
+				Poprawiam komfort jazdy oraz stabilność prowadzenia auta.
+			</p>
+		</div>
+
+		<div class="category-tile">
+			<span class="icon">❄️</span>
+			<h3>Klimatyzacja</h3>
+			<p>
+				Oferuję serwis klimatyzacji, nabijanie czynnika
+				oraz kontrolę szczelności dla skutecznego chłodzenia.
+			</p>
+		</div>
+
+	</div>
+</section>
+
+<section class="map-section">
+	<h2>Moja lokalizacja</h2>
+
+	<p class="map-info">
+		Aby przesunąć mapę na telefonie, użyj <strong>dwóch palców</strong>.
+	</p>
+
+	<div id="map"></div>
+</section>
+
+<!-- ================= KOMENTARZE ================= -->
+<section class="comments auth-only hidden">
+	<h2>Komentarze</h2>
+
+	<form id="commentForm">
+		<input
+			type="text"
+			name="name"
+			placeholder="Twoje imię"
+			required
+		/>
+
+		<div class="stars" id="starRating">
+			<span class="star" data-value="1">★</span>
+			<span class="star" data-value="2">★</span>
+			<span class="star" data-value="3">★</span>
+			<span class="star" data-value="4">★</span>
+			<span class="star" data-value="5">★</span>
+		</div>
+
+		<textarea
+			name="text"
+			placeholder="Napisz komentarz..."
+			required
+		></textarea>
+
+		<button type="submit">Dodaj komentarz</button>
+	</form>
+
+	<div id="commentList"></div>
+</section>
+
+<section class="comments guest-only">
+	<h2>Dodawanie komentarzy</h2>
+	<p style="text-align:center;margin-top:20px;">
+		Musisz być zalogowany, aby dodać komentarz.
+	</p>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact" class="footer">
+	<div class="footer-container">
+		<h3>Kontakt</h3>
+		<p>
+	<a href="#top" class="footer-logo"><strong>xxxXXXxxx</strong></a>
+</p>
+
+		<p>ul. Przykładowa 12</p>
+		<p>62-800 Kalisz</p>
+		<p>📞 +48 600 000 000</p>
+		<p>📧 kontakt@wolnystrzelec.pl</p>
+
+		<p class="footer-copy">
+			© 2026 Wolny Strzelec
+		</p>
+	</div>
+</footer>
+
+<!-- ================= MODAL LOGOWANIA ================= -->
+
+<div id="cookieBanner" class="cookie-banner hidden">
+	<p>
+		Ta strona wykorzystuje pliki cookies w celach technicznych
+		(logowanie, komentarze, statystyki).
+		<a href="#" id="openCookiesInfo" class="cookie-link">
+			Dowiedz się więcej
+		</a>
+	</p>
+	<button id="acceptCookies">Akceptuję</button>
+</div>
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
