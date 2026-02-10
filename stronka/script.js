@@ -31,6 +31,15 @@ userMenu?.addEventListener('click', (e) => e.stopPropagation());
 mobileMenu?.addEventListener('click', (e) => e.stopPropagation());
 
 document.addEventListener('click', closeAllMenus);
+/* =====================================================
+   ZAMYKANIE HAMBURGERA PO KLIKNIĘCIU W LINK 
+===================================================== */
+
+mobileMenu?.querySelectorAll('a').forEach((link) => {
+	link.addEventListener('click', () => {
+		mobileMenu.classList.add('hidden');
+	});
+});
 
 /* =====================================================
    KOMENTARZE
