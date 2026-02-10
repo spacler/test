@@ -15,10 +15,9 @@ body {
 body {
   min-height: 100%;
   color: #e5e7eb;
-
-  background:
-    radial-gradient(circle at 20% 15%, rgba(56,189,248,0.08), transparent 40%),
-    radial-gradient(circle at top, #0f172a, #020617 70%);
+	background:
+		radial-gradient(circle at 20% 15%, rgba(56,189,248,0.08), transparent 40%),
+		radial-gradient(circle at top, #0f172a, #020617 70%);
 }
 .header {
 	position: sticky;
