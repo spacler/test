@@ -111,19 +111,44 @@ async function checkAuth() {
 }
 
 /* =====================================================
+   FUNKCJA WYKRYWAJĄCA MAPE
+===================================================== */
+
+function isMobile() {
+  return window.matchMedia('(max-width: 768px)').matches;
+}
+
+/* =====================================================
    MAPA
 ===================================================== */
 const mapElement = document.getElementById('map');
 
 if (mapElement && typeof L !== 'undefined') {
+
 	const map = L.map('map', {
 		scrollWheelZoom: false,
-		dragging: true,
+		dragging: !isMobile(), // desktop: TAK, mobile: NIE
 		tap: false,
 	}).setView([51.761, 18.091], 12);
 
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 	L.marker([51.761, 18.091]).addTo(map);
+
+	if (isMobile()) {
+		// tap = aktywuj mapę
+		mapElement.addEventListener('click', () => {
+			map.dragging.enable();
+			mapElement.classList.add('active');
+		});
+
+		// wyjazd palca = dezaktywuj (żeby scroll wrócił)
+		mapElement.addEventListener('touchend', () => {
+			setTimeout(() => {
+				map.dragging.disable();
+				mapElement.classList.remove('active');
+			}, 300);
+		});
+	}
 }
 
 /* =====================================================
