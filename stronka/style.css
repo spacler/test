@@ -739,7 +739,8 @@ html {
 	border-radius: 12px;
 	border: 1px solid #1e293b;
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-	touch-action: pan-x pan-y
+    touch-action: pan-x pan-y; /* scroll strony 1 palcem */
+    transition: border-color 0.2s ease;
 }
 
 .map-info {
@@ -748,6 +749,9 @@ html {
 	color: #ccc;
 	margin-bottom: 10px;
 	opacity: 0.85;
+}
+#map.active {
+  border-color: #38bdf8;
 }
 /* ===== FIX CHECKBOX W MODALU ===== */
 .checkbox input[type='checkbox'] {
