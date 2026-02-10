@@ -28,8 +28,13 @@ hamburgerBtn?.addEventListener('click', (e) => {
 });
 
 userMenu?.addEventListener('click', (e) => e.stopPropagation());
-mobileMenu?.addEventListener('click', (e) => e.stopPropagation());
 
+mobileMenu?.addEventListener('click', (e) => {
+	const link = e.target.closest('a');
+	if (link) {
+		mobileMenu.classList.add('hidden');
+	}
+});
 document.addEventListener('click', closeAllMenus);
 /* =====================================================
    ZAMYKANIE HAMBURGERA PO KLIKNIĘCIU W LINK 
