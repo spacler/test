@@ -13,15 +13,13 @@ body {
 }
 
 body {
-	background:
-		linear-gradient(180deg, rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.95)), url('https://images.unsplash.com/photo-1542362567-b07e54358753');
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
+  min-height: 100%;
+  color: #e5e7eb;
 
-	color: #e5e7eb;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(56,189,248,0.08), transparent 40%),
+    radial-gradient(circle at top, #0f172a, #020617 70%);
 }
-
 .header {
 	position: sticky;
 	top: 0;
