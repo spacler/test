@@ -6,16 +6,19 @@ padding:0;
 box-sizing:border-box;
 }
 
+
+
 body{
+overflow-x:hidden;
 font-family:"Segoe UI",system-ui,sans-serif;
 line-height:1.6;
 
 background:
-radial-gradient(circle at 20% 20%, rgba(255,193,7,0.15), transparent 40%),
-radial-gradient(circle at 80% 80%, rgba(59,130,246,0.15), transparent 40%),
-#0f172a;
+radial-gradient(circle at 20% 20%, rgba(255,193,7,0.08), transparent 40%),
+radial-gradient(circle at 80% 80%, rgba(59,130,246,0.08), transparent 40%),
+#f5f5f5;
 
-color:#e5e7eb;
+color:#0f172a;
 }
 
 /* linki */
@@ -104,7 +107,9 @@ article{
 background:white;
 padding:30px;
 border-radius:14px;
-box-shadow:0 10px 30px rgba(0,0,0,0.06);
+
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+
 transition:all .25s ease;
 }
 
@@ -112,3 +117,4 @@ article:hover{
 transform:translateY(-6px);
 box-shadow:0 20px 40px rgba(0,0,0,0.08);
 }
+
