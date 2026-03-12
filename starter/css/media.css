@@ -1,0 +1,28 @@
+@media (max-width:768px){
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+nav ul{
+gap:15px;
+}
+
+.hero{
+padding:100px 20px;
+}
+
+h1{
+font-size:32px;
+}
+
+h2{
+font-size:26px;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+}
