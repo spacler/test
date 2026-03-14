@@ -44,28 +44,47 @@ color:#fff7ed;
 margin-bottom:25px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-margin-top:40px;
-max-width:1100px;
-margin-left:auto;
-margin-right:auto;
+/* Uniwersalny kontener dla zawartości sekcji */
+section {
+    max-width: 1200px; /* Nieco szerzej dla lepszego oddechu */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 20px; /* Standardowe odstępy góra/dół */
+    box-sizing: border-box;
 }
 
-#services{
-
-background:
-radial-gradient(circle at bottom left, rgba(255,200,100,0.45), transparent 45%),
-radial-gradient(circle at top right, rgba(255,120,0,0.25), transparent 40%),
-linear-gradient(135deg,#fbbf24,#f59e0b,#ea580c);
-
-color:white;
-padding:120px 20px;
-margin-top:80px;
-
+/* Specyficzne poprawki dla sekcji Services, by tło było na 100%, a treść w środku */
+#services {
+    width: 100%;
+    max-width: none; /* Pozwalamy tłu rozlać się na boki */
+    margin-top: 80px;
+    padding: 100px 0; /* Pading tylko góra/dół */
+    background: 
+        radial-gradient(circle at bottom left, rgba(255,200,100,0.45), transparent 45%),
+        radial-gradient(circle at top right, rgba(255,120,0,0.25), transparent 40%),
+        linear-gradient(135deg,#fbbf24,#f59e0b,#ea580c);
 }
+
+/* Kontener wewnątrz usług, który faktycznie centruje karty */
+#services .grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    /* auto-fit sprawi, że karty same się wyśrodkują gdy będzie ich mniej */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* Wyśrodkowanie nagłówków w sekcjach */
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+
+
 
 
 #services article{
@@ -100,7 +119,226 @@ summary{
 font-weight:600;
 }
 
-section{
-max-width:1100px;
-margin:auto;
+/* Styl dla wyróżnionych kart, aby karta nr 2 mogła się delikatnie odróżniać */
+.service-card {
+    border: 1px solid #ced4da;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
+
+/* Efekt po najechaniu dla użytkowników myszek (nie psuje dostępności) */
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.access-note {
+    margin-top: auto; /* Popycha notatkę na dół karty, jeśli karty mają różną wysokość */
+    padding: 0.8rem;
+    background-color: #f8f9fa; /* Jasne tło dla wyróżnienia ważnej informacji */
+    border-left: 4px solid #0066cc; /* Akcent kolorystyczny */
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #444;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+.hosting-card {
+    border-top: 4px solid #28a745; /* Zielony akcent oznaczający "gotowość/start" */
+}
+
+.support-box {
+    margin-top: auto;
+    padding: 1rem;
+    background-color: #e9f7ef; /* Bardzo jasny zielony, wysoki kontrast z czarnym tekstem */
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #155724;
+}
+
+/* WCAG: Zapewnienie widocznego focusu dla osób poruszających się klawiaturą */
+.service-card:focus-within {
+    outline: 3px solid #0056b3;
+    outline-offset: 4px;
+}
+
+/*#cta-contact { 
+    background-color: #0056b3; Głęboki niebieski - wysoki kontrast z białym tekstem 
+    color: #ffffff;
+    padding: 4rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    margin: 3rem 0;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap; Kluczowe dla mobile
+}*/
+
+
+/* Karta CTA wewnątrz pomarańczowej sekcji services */
+.cta-card {
+    background: #0f172a !important; /* Ciemny, elegancki granat - świetny kontrast do pomarańczu */
+    color: white !important;
+    border: none !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    border-radius: 8px; /* Dopasuj do reszty kart */
+}
+
+.cta-card h3 {
+    color: #fbbf24 !important; /* Złoty/żółty akcent, żeby nawiązać do gradientu */
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    text-shadow: none;
+}
+
+.cta-card p {
+    color: #cbd5e1 !important; /* Jasnoszary tekst dla lepszej czytelności na ciemnym tle */
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.cta-grid-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 10px;
+}
+
+/* Przycisk Główny na ciemnej karcie - teraz może być pomarańczowy! */
+.cta-card .btn-primary {
+    background: linear-gradient(135deg, #fbbf24, #ea580c);
+    color: white !important;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+    border: none;
+    box-shadow: 0 4px 15px rgba(234, 88, 12, 0.4);
+}
+
+.cta-card .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(234, 88, 12, 0.6);
+    background: linear-gradient(135deg, #fcd34d, #f97316);
+}
+
+/* Przycisk wtórny na ciemnej karcie */
+.cta-card .btn-secondary-dark {
+    background: rgba(255, 255, 255, 0.05);
+    color: white !important;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.cta-card .btn-secondary-dark:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.cta-small-note {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin-top: 15px;
+}
+
+
+#faq {
+    width: 100%;
+    max-width: 1100px; /* Identycznie jak Twoja nav i grid */
+    margin: 100px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+#faq h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0f172a;
+}
+
+details {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Efekt po otwarciu / najechaniu */
+details[open] {
+    border-color: #f59e0b;
+    box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.1);
+}
+
+summary {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1e293b;
+    cursor: pointer;
+    list-style: none; /* Ukrywamy domyślny trójkąt w niektórych przeglądarkach */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+}
+
+/* Własny znacznik rozwijania */
+summary::after {
+    content: "+";
+    color: #f59e0b;
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: transform 0.3s ease;
+}
+
+details[open] summary::after {
+    transform: rotate(45deg);
+    color: #ea580c;
+}
+
+details p {
+    margin-top: 15px;
+    line-height: 1.6;
+    color: #475569;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 15px;
+}
+
+/* WCAG: Focus dla osób używających klawiatury */
+summary:focus {
+    color: #ea580c;
+    text-decoration: underline;
+}
+
+

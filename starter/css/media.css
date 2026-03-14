@@ -61,12 +61,6 @@ flex-direction:column;
 gap:20px;
 }
 
-.menu{
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
-
 .hero{
 padding-top:160px;
 }
@@ -87,4 +81,137 @@ font-size:34px;
 font-size:18px;
 }
 
+}
+
+/* Dostosowanie dla urządzeń mobilnych */
+@media screen and (max-width: 768px) {
+    .access-note {
+        margin-top: 1rem;
+        font-size: 1rem; /* Większy tekst na mobile dla lepszej czytelności */
+    }
+}
+
+/* WCAG: Zapewnienie, że po powiększeniu tekstu (zoom 200%) karta nadal jest czytelna */
+@media screen and (max-width: 480px) {
+    .service-card h3 {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+    
+    .features-list li {
+        font-size: 0.95rem; /* Subtelne dopasowanie na bardzo małe ekrany */
+    }
+}
+
+/* RWD - Dostosowanie do telefonów */
+@media (max-width: 600px) {
+    .cta-container h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%; /* Przyciski na całą szerokość ekranu */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    .footer-nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Domyślnie ukrywamy przycisk na desktopach i tabletach */
+.btn-mobile-only {
+    display: none !important;
+}
+
+/* Pokazujemy przycisk tylko na urządzeniach mobilnych (poniżej 768px) */
+@media (max-width: 767px) {
+    .btn-mobile-only {
+        display: inline-block !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        /* Margines zewnętrzny - odsuwa Hero od Headera */
+        margin-top: 25px; 
+        
+        /* Układ i centrowanie */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+
+        /* Padding wewnętrzny: góra 140px (miejsce na logo), boki 20px, dół 80px */
+        padding: 140px 20px 80px; 
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        margin-top: 20px;
+        font-size: 18px;
+        margin-bottom: 20px;
+        padding: 0 10px;
+    }
+}
+
+    .hero .btn-mobile-only {
+        width: 100%; /* Przycisk na pełną szerokość ekranu (łatwiej kliknąć kciukiem) */
+        max-width: 300px; /* Ale nie za szeroki */
+        padding: 16px;
+        font-size: 1.2rem;
+    }
+
+
+@media (max-width: 768px) {
+    .logo {
+        margin-top: 20px; /* Dostosuj wartość do własnych potrzeb */
+        display: block;   /* Zapewnia poprawne naliczanie marginesów */
+        text-align: center; /* Dodatkowo wyśrodkuje logo w kolumnie */
+    }
+
+    .nav {
+        flex-direction: column; /* Upewniamy się, że logo jest nad menu */
+        gap: 15px;
+    }
+}
+@media (max-width: 768px) {
+    /* Ustawiamy header jako stały element lub wyrównany do góry */
+    .header {
+        position: absolute; /* Zostawiamy absolute, jeśli ma być na tle hero */
+        top: 0;
+        padding-top: 20px; /* To jest Twój margines od samej góry ekranu */
+    }
+
+    .nav {
+        flex-direction: column; /* Układ: Logo na górze, Menu pod spodem */
+        gap: 15px; /* Odstęp między logo a menu */
+        align-items: center;
+    }
+
+    .menu {
+        flex-direction: row; /* Jeśli chcesz, żeby linki były w rzędzie (Home About...) */
+        flex-wrap: wrap;     /* Jeśli się nie zmieszczą, przejdą do nowej linii */
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 20px;
+        width: auto;
+    }
 }
