@@ -214,4 +214,9 @@ font-size:18px;
         padding: 10px 20px;
         width: auto;
     }
+}@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
 }
+

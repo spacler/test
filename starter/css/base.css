@@ -6,7 +6,7 @@ padding:0;
 box-sizing:border-box;
 }
 
-
+/* body */
 
 body{
 overflow-x:hidden;
@@ -38,6 +38,11 @@ list-style:none;
 
 section{
 padding:100px 20px;
+}
+
+/* container */
+
+.container{
 max-width:1200px;
 margin:auto;
 }
@@ -63,6 +68,8 @@ margin-bottom:10px;
 font-weight:600;
 }
 
+/* tekst */
+
 p{
 opacity:0.8;
 font-size:17px;
@@ -78,6 +85,7 @@ border-radius:8px;
 font-weight:600;
 margin-top:25px;
 display:inline-block;
+transition:0.2s;
 }
 
 .btn:hover{
@@ -103,18 +111,15 @@ z-index:999;
 
 /* karty */
 
-article{
+.card{
 background:white;
 padding:30px;
 border-radius:14px;
-
 box-shadow:0 15px 35px rgba(0,0,0,0.08);
-
 transition:all .25s ease;
 }
 
-article:hover{
+.card:hover{
 transform:translateY(-6px);
 box-shadow:0 20px 40px rgba(0,0,0,0.08);
 }
-

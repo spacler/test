@@ -154,8 +154,9 @@
                 </article>
                 <article class="service-card cta-card">
                     <h3 id="cta-title">Zacznijmy Twój projekt!</h3>
-                    <p>Masz pytania? Chętnie na nie odpowiem. Dobiorę funkcje do Twojego biznesu i przygotuję bezpłatną wycenę.</p>
-                
+                    <p>Masz pytania? Chętnie na nie odpowiem. Dobiorę funkcje do Twojego biznesu i przygotuję bezpłatną
+                        wycenę.</p>
+
                     <div class="cta-grid-actions">
                         <a href="tel:+48123123123" class="btn-primary" aria-label="Zadzwoń: +48 123 123 123">
                             Zadzwoń: +48 123 123 123
@@ -164,7 +165,7 @@
                             Napisz wiadomość
                         </a>
                     </div>
-                
+
                     <p class="cta-small-note">Odpowiadam w ciągu 24h</p>
                 </article>
             </div>
@@ -172,42 +173,131 @@
 
         <section id="faq" aria-labelledby="faq-title">
             <h2 id="faq-title">Najczęściej zadawane pytania</h2>
-        
+
             <details>
                 <summary>Ile trwa budowa strony internetowej?</summary>
                 <p>Standardowy czas realizacji to od 7 do 14 dni roboczych, zależnie od stopnia rozbudowania funkcji i
                     dostarczenia niezbędnych treści.</p>
             </details>
-        
+
             <details>
                 <summary>Czy po oddaniu strony będę mógł samodzielnie zmieniać treści?</summary>
-                <p>Tak. Każda strona posiada intuicyjny panel administratora, który pozwala na edycję tekstów, zdjęć oraz
+                <p>Tak. Każda strona posiada intuicyjny panel administratora, który pozwala na edycję tekstów, zdjęć
+                    oraz
                     zarządzanie opiniami bez wiedzy programistycznej.</p>
             </details>
-        
+
             <details>
                 <summary>Czy strona będzie poprawnie wyświetlać się na telefonach?</summary>
-                <p>Oczywiście. Wszystkie nasze projekty są w pełni responsywne (RWD), co oznacza, że dopasowują się do ekranów
+                <p>Oczywiście. Wszystkie nasze projekty są w pełni responsywne (RWD), co oznacza, że dopasowują się do
+                    ekranów
                     smartfonów, tabletów i komputerów.</p>
             </details>
-        
+
             <details>
                 <summary>Co jest potrzebne do rozpoczęcia prac?</summary>
-                <p>Na start potrzebujemy opisu Twojej działalności, listy usług oraz ewentualnych zdjęć. Jeśli nie masz własnych
+                <p>Na start potrzebujemy opisu Twojej działalności, listy usług oraz ewentualnych zdjęć. Jeśli nie masz
+                    własnych
                     materiałów, pomożemy w ich przygotowaniu.</p>
             </details>
-        
+
             <details>
                 <summary>Czy pomagacie w zakupie domeny i serwera?</summary>
-                <p>Tak, oferujemy pełne wsparcie techniczne – od wyboru odpowiedniego hostingu, przez rejestrację domeny, aż po
+                <p>Tak, oferujemy pełne wsparcie techniczne – od wyboru odpowiedniego hostingu, przez rejestrację
+                    domeny, aż po
                     wdrożenie bezpiecznego certyfikatu SSL.</p>
             </details>
-        
+
             <details>
                 <summary>Jak wyglądają płatności?</summary>
                 <p>Zazwyczaj rozliczamy się w systemie zaliczkowym. Szczegóły ustalamy indywidualnie po darmowej wycenie
                     projektu.</p>
             </details>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Zapytaj o wycenę strony</h2>
+        
+            <form class="contact-form" action="#" method="post">
+        
+                <fieldset>
+                    <legend>Dane kontaktowe</legend>
+        
+                    <div class="form-group">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="phone">Telefon (opcjonalnie)</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel">
+                    </div>
+        
+                </fieldset>
+        
+        
+                <fieldset>
+                    <legend>Szczegóły projektu</legend>
+        
+                    <div class="form-group">
+                        <label for="type">Rodzaj strony</label>
+                        <select id="type" name="type" required>
+                            <option value="">Wybierz typ strony</option>
+                            <option>Strona usługowa</option>
+                            <option>Strona firmowa</option>
+                            <option>Landing page</option>
+                            <option>Sklep internetowy</option>
+                            <option>Blog</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="pages">Liczba podstron</label>
+                        <select id="pages" name="pages">
+                            <option>1 (landing page)</option>
+                            <option>2–5</option>
+                            <option>6–10</option>
+                            <option>10+</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="budget">Budżet projektu</label>
+                        <select id="budget" name="budget">
+                            <option>do 1000 zł</option>
+                            <option>1000–3000 zł</option>
+                            <option>3000–6000 zł</option>
+                            <option>6000 zł +</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="message">Opisz projekt</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+        
+                </fieldset>
+        
+        
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="privacy" required>
+                    <label for="privacy">
+                        Akceptuję <a href="polityka-prywatnosci.html">politykę prywatności</a>
+                    </label>
+                </div>
+        
+                <button type="submit" class="contact-btn">
+                    Poproś o wycenę
+                </button>
+        
+                <p class="form-status" role="status" aria-live="polite"></p>
+        
+            </form>
+        </section>
     </main>
     <footer class="main-footer" role="contentinfo">
         <div class="footer-container">
