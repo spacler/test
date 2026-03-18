@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 
 <body>
@@ -286,7 +287,8 @@
                 <div class="form-group checkbox">
                     <input type="checkbox" id="privacy" required>
                     <label for="privacy">
-                        Akceptuję <a href="polityka-prywatnosci.html">politykę prywatności</a>
+                        Akceptuję
+                        <a href="#" data-open-modal>politykę prywatności</a>
                     </label>
                 </div>
         
@@ -307,12 +309,56 @@
             <nav class="footer-nav" aria-label="Menu prawne">
                 <ul>
                     <li><a href="regulamin.html">Regulamin</a></li>
-                    <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+                    <a href="#" data-open-modal>Polityka prywatności</a></li>
                     <li><a href="deklaracja-dostepnosci.html">Deklaracja dostępności</a></li>
                 </ul>
             </nav>
         </div>
     </footer>
+    <!-- PRZYCISK -->
+    <button type="button" class="privacy-btn" data-open-modal>
+        Polityka prywatności
+    </button>
+    
+    <!-- MODAL -->
+    <div class="modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    
+        <div class="modal__overlay" data-close-modal></div>
+    
+        <div class="modal__content" role="document">
+    
+            <button class="modal__close" type="button" aria-label="Zamknij" data-close-modal>
+                &times;
+            </button>
+    
+            <h2 id="modalTitle">Polityka prywatności</h2>
+    
+            <div class="modal__scroll" tabindex="0">
+                <p>Twoja prywatność jest dla nas ważna...</p>
+    
+                <h3>1. Administrator danych</h3>
+                <p>Twoja firma</p>
+    
+                <h3>2. Dane</h3>
+                <p>Email, telefon</p>
+    
+                <h3>3. Cel</h3>
+                <p>Kontakt i realizacja usług</p>
+    
+                <h3>4. Prawa</h3>
+                <p>Masz prawo do usunięcia danych</p>
+    
+                <!-- żeby scroll działał -->
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+                <p>Lorem ipsum dolor sit amet...</p>
+            </div>
+    
+        </div>
+    </div>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>
