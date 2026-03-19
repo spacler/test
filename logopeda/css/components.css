@@ -1,55 +1,128 @@
-/* PRZYCISKI */
 .btn {
 	display: inline-block;
 	padding: 12px 24px;
-	border-radius: 5px;
+	border-radius: 10px;
 	border: none;
 	cursor: pointer;
-	font-weight: bold;
+	font-weight: 600;
 	text-decoration: none;
+	transition: all 0.3s ease;
 }
+
+/* primary */
 .btn-primary {
 	background: var(--primary);
 	color: white;
+	box-shadow: 0 4px 10px rgba(87, 86, 166, 0.2);
 }
+
+.btn-primary:hover {
+	background: var(--primary-light);
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(87, 86, 166, 0.3);
+}
+
+/* outline */
 .btn-outline {
 	border: 2px solid var(--primary);
 	color: var(--primary);
 	background: transparent;
 }
+
+.btn-outline:hover {
+	background: var(--primary);
+	color: white;
+}
+
+/* block */
 .btn-block {
 	width: 100%;
 }
-
-/* KARTY */
 .card {
 	background: white;
 	padding: 25px;
-	border-radius: 8px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-	border: 1px solid #ddd;
+	border-radius: 14px;
+	border: 1px solid #eee;
+	transition: all 0.3s ease;
 }
 
-/* FORMULARZ */
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
 .card-form {
 	max-width: 500px;
 	margin: 0 auto;
 	background: var(--white);
 	padding: 30px;
-	border-radius: 8px;
+	border-radius: 14px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
+
 .input-group {
-	margin-bottom: 15px;
+	margin-bottom: 18px;
 }
+
 label {
 	display: block;
-	margin-bottom: 5px;
-	font-weight: bold;
+	margin-bottom: 6px;
+	font-weight: 600;
+	font-size: 0.9rem;
 }
+
+/* inputy */
 input,
 textarea {
 	width: 100%;
-	padding: 10px;
-	border: 1px solid #777;
-	border-radius: 4px;
+	padding: 12px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	transition: 0.2s;
+	font-family: inherit;
+}
+
+/* focus */
+input:focus,
+textarea:focus {
+	border-color: var(--primary);
+	box-shadow: 0 0 0 2px rgba(87, 86, 166, 0.15);
+}
+select {
+	width: 100%;
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid #ddd;
+	font-family: inherit;
+}
+
+.input-group.checkbox {
+	display: flex;
+	gap: 10px;
+	align-items: flex-start;
+}
+
+fieldset {
+	border: none;
+	padding: 0;
+}
+
+legend {
+	font-weight: 600;
+	margin-bottom: 15px;
+}
+.form-intro {
+  margin-bottom: 25px;
+  font-size: 1 rem;
+  font-weight: bold;
+}
+
+/* obraz w sekcji about */
+#about img {
+	width: 100%;
+	height: 100%;
+	max-height: 350px;
+	object-fit: cover;
+	border-radius: 14px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }

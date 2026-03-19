@@ -27,23 +27,36 @@
     <main id="main">
         <section class="hero bg-dark">
             <div class="container">
-                <h1>Lorem Ipsum Dolor Sit</h1>
-                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                <div class="flex-group">
-                    <button class="btn btn-primary">Start</button>
-                    <button class="btn btn-outline">Więcej</button>
-                </div>
+                <h1>Gabinet Logopedyczny Mowa i Rozwój</h1>
+                <p>Indywidualna terapia logopedyczna dopasowana do potrzeb dziecka i dorosłego</p>
             </div>
         </section>
 
         <section id="about" class="section">
-            <div class="container grid-2">
-                <div>
-                    <h2>O nas</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco.</p>
+            <div class="container">
+
+                <div class="grid-2">
+                    <!-- GÓRA -->
+                    <div>
+                        <h2>O mnie</h2>
+
+                        <p>Jestem logopedą w Warszawie i pomagam dzieciom oraz dorosłym poprawić wymowę...</p>
+
+                        <p>W pracy skupiam się na indywidualnym podejściu do każdego pacjenta...</p>
+                    </div>
+
+                    <img src="img/logopeda.png" alt="Logopeda podczas terapii dziecka">
                 </div>
-                <div class="placeholder-img"></div>
+
+                <!-- DÓŁ (pełna szerokość) -->
+                <div class="about-full">
+                    <p>Podczas zajęć dbam o komfort i spokojną atmosferę...</p>
+
+                    <p>Pomagam również osobom dorosłym...</p>
+
+                    <p>Jeśli szukasz logopedy w Warszawie – zapraszam do kontaktu...</p>
+                </div>
+
             </div>
         </section>
 
@@ -52,41 +65,131 @@
                 <h2>Dlaczego my?</h2>
                 <div class="grid-3">
                     <div class="card">
-                        <h3>Eksperci</h3>
-                        <p>Lorem ipsum...</p>
+                        <h3>Terapia dzieci</h3>
+                        <p>Pomagam dzieciom poprawić wymowę i rozwijać mowę poprzez indywidualne ćwiczenia dopasowane do
+                            wieku.</p>
+                        <p>👉 Lepsza komunikacja i większa pewność siebie</p>
                     </div>
                     <div class="card">
-                        <h3>Jakość</h3>
-                        <p>Lorem ipsum...</p>
+                        <h3>Terapia dorosłych</h3>
+                        <p>Praca nad dykcją, artykulacją i swobodą wypowiedzi w życiu zawodowym i codziennym.</p>
+                        <p>👉 Wyraźna i pewna mowa</p>
                     </div>
                     <div class="card">
-                        <h3>Cena</h3>
-                        <p>Lorem ipsum...</p>
+                        <h3>Diagnoza logopedyczna</h3>
+                        <p>Dokładna ocena problemu oraz plan terapii już na pierwszym spotkaniu.</p>
+                        <p>👉 Jasny plan i szybki start</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <section id="faq" class="section">
+            <div class="container">
+                <h2 id="faq-title">Najczęściej zadawane pytania</h2>
+
+                <details>
+                    <summary>Kiedy warto zgłosić się do logopedy?</summary>
+                    <p>Gdy dziecko ma trudności z wymową, mówi niewyraźnie lub rozwój mowy jest opóźniony. Warto działać
+                        jak
+                        najwcześniej.</p>
+                </details>
+
+                <details>
+                    <summary>Ile trwa terapia logopedyczna?</summary>
+                    <p>To zależy od problemu i regularności ćwiczeń, ale pierwsze efekty często widać już po kilku
+                        spotkaniach.</p>
+                </details>
+
+                <details>
+                    <summary>Czy rodzic uczestniczy w zajęciach?</summary>
+                    <p>Tak, często pokazuję ćwiczenia do pracy w domu, aby przyspieszyć efekty terapii.</p>
+                </details>
+
+                <details>
+                    <summary>Czy terapia jest trudna dla dziecka?</summary>
+                    <p>Nie – zajęcia mają formę zabawy i są dostosowane do wieku dziecka.</p>
+                </details>
+
+                <details>
+                    <summary>Czy pracujesz również z dorosłymi?</summary>
+                    <p>Tak, pomagam poprawić dykcję, artykulację i pewność wypowiedzi.</p>
+                </details>
+            </div>
+        </section>
+
         <section id="contact" class="section">
             <div class="container">
-                <form id="contact-form" class="card-form">
-                    <div class="input-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="input-group">
-                        <label for="msg">Wiadomość</label>
-                        <textarea id="msg" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Wyślij</button>
+                <p class="form-intro text-center">
+                    <span>Masz pytania lub chcesz umówić wizytę? Napisz – chętnie pomogę</span>
+
+                <form id="contact-form" class="card-form" novalidate>
+
+                    <fieldset>
+                        <legend>Umów konsultację</legend>
+
+                        <div class="input-group">
+                            <label for="name">Imię i nazwisko</label>
+                            <input type="text" id="name" name="name" required aria-required="true">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone" required aria-required="true">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="email">E-mail (opcjonalnie)</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="service">Kogo dotyczy wizyta?</label>
+                            <select id="service" name="service" required aria-required="true">
+                                <option value="">Wybierz</option>
+                                <option value="dziecko">Dziecko</option>
+                                <option value="dorosly">Dorosły</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="msg">Krótki opis problemu</label>
+                            <textarea id="msg" name="msg" rows="4"></textarea>
+                        </div>
+
+                        <div class="input-group checkbox">
+                            <label for="consent">
+                                Wyrażam zgodę na przetwarzanie danych w celu kontaktu
+                            </label>
+                            <input type="checkbox" id="consent" name="consent" required aria-required="true">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Umów konsultację
+                        </button>
+
+                        <p id="form-status" aria-live="polite"></p>
+
+                    </fieldset>
+
                 </form>
+
             </div>
         </section>
     </main>
 
-    <footer class="main-footer bg-dark">
-        <div class="container">
-            <p>&copy; 2026 Firma. WCAG 2.1 Compliant.</p>
+    <footer class="main-footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>&copy; 2026 Twoja Firma. Wszelkie prawa zastrzeżone.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Menu prawne">
+                <ul>
+                    <li><a href="regulamin.html">Regulamin</a></li>
+                    <li><a href="#" data-open-modal>Polityka prywatności</a></li>
+                    <li><a href="deklaracja-dostepnosci.html">Deklaracja dostępności</a></li>
+                </ul>
+            </nav>
         </div>
     </footer>
 
