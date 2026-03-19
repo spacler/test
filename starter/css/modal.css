@@ -4,10 +4,20 @@
   inset: 0;
   display: none;
   z-index: 9999;
+
+  /* centrowanie */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* odstępy od krawędzi + safe area */
+  padding: 10px;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom));
+  box-sizing: border-box;
 }
 
 .modal[aria-hidden="false"] {
-  display: block;
+  display: flex;
 }
 
 /* ===== OVERLAY (blur + fade) ===== */
@@ -23,12 +33,20 @@
 .modal__content {
   position: relative;
   max-width: 600px;
-  width: 92%;
-  margin: 10vh auto;
+  width: 100%;
+  margin: 0;
+
   background: rgba(255, 255, 255, 0.95);
   border-radius: 16px;
-  padding: 24px;
+
+  padding: 20px;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
+
   z-index: 1;
+
+  /* kluczowe dla mobile */
+  max-height: calc(100dvh - 20px);
+  overflow: hidden;
 
   box-shadow: 
     0 20px 60px rgba(0,0,0,0.25),
@@ -37,7 +55,7 @@
   animation: slideUp 0.35s ease;
 }
 
-/* ===== ZAMKNIJ (ładniejszy) ===== */
+/* ===== ZAMKNIJ ===== */
 .modal__close {
   position: absolute;
   top: 12px;
@@ -59,13 +77,13 @@
 
 /* ===== SCROLL ===== */
 .modal__scroll {
-  max-height: 350px;
+  max-height: calc(100dvh - 160px);
   overflow-y: auto;
   margin-top: 15px;
   padding-right: 8px;
 }
 
-/* custom scrollbar */
+/* scrollbar */
 .modal__scroll::-webkit-scrollbar {
   width: 6px;
 }
