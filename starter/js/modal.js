@@ -22,14 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function closeModal() {
-    modal.hidden = true;
-    modal.setAttribute("aria-hidden", "true");
+  modal.hidden = true;
+  modal.setAttribute("aria-hidden", "true");
 
-    document.body.style.overflow = "";
+  document.body.style.overflow = "";
 
-    if (lastFocusedElement) {
-      lastFocusedElement.focus();
-    }
+  // 🔥 usuwa focus
+  if (document.activeElement) {
+    document.activeElement.blur();
+  }
   }
 
   closeBtns.forEach((btn) => {
