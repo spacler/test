@@ -1,0 +1,17 @@
+/* PRZYCISKI */
+.btn { 
+    display: inline-block; padding: 12px 24px; border-radius: 5px; 
+    border: none; cursor: pointer; font-weight: bold; text-decoration: none;
+}
+.btn-primary { background: var(--primary); color: white; }
+.btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
+.btn-block { width: 100%; }
+
+/* KARTY */
+.card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border: 1px solid #ddd; }
+
+/* FORMULARZ */
+.card-form { max-width: 500px; margin: 0 auto; background: var(--white); padding: 30px; border-radius: 8px; }
+.input-group { margin-bottom: 15px; }
+label { display: block; margin-bottom: 5px; font-weight: bold; }
+input, textarea { width: 100%; padding: 10px; border: 1px solid #777; border-radius: 4px; }
