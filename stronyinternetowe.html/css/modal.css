@@ -1,0 +1,153 @@
+/* ===== MODAL BASE ===== */
+.modal {
+	position: fixed;
+	inset: 0;
+	display: none;
+	z-index: 9999;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.modal[aria-hidden='true'] {
+	display: none;
+}
+
+.modal[aria-hidden='false'] {
+	display: flex;
+}
+
+/* ===== OVERLAY ===== */
+.modal__overlay {
+	position: absolute;
+	inset: 0;
+
+	background: rgba(2, 6, 23, 0.7);
+	backdrop-filter: blur(10px);
+
+	animation: fadeIn 0.3s ease;
+}
+
+/* ===== OKNO ===== */
+.modal__content {
+	position: relative;
+	max-width: 600px;
+	width: 100%;
+
+	background: rgba(255, 255, 255, 0.02);
+	backdrop-filter: blur(20px);
+
+	border-radius: 20px;
+	padding: 24px;
+
+	z-index: 2;
+
+	border: 1px solid rgba(255, 255, 255, 0.1);
+
+	box-shadow:
+		0 20px 60px rgba(0, 0, 0, 0.6),
+		0 0 50px rgba(59, 130, 246, 0.25);
+
+	animation: slideUp 0.35s ease;
+
+	overflow: hidden;
+}
+
+/* LIGHT EFFECT */
+.modal__content::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+
+	background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), transparent 50%);
+
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+/* ===== TEKST ===== */
+.modal__content h2,
+.modal__content h3 {
+	color: white;
+}
+
+.modal__content p {
+	color: #cbd5e1;
+}
+
+/* ===== CLOSE ===== */
+.modal__close {
+	position: absolute;
+	top: 12px;
+	right: 14px;
+
+	z-index: 3; /* 🔥 kluczowe */
+
+	font-size: 22px;
+
+	background: rgba(255, 255, 255, 0.08);
+	color: white;
+
+	border: none;
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.modal__close:hover {
+	background: rgba(96, 165, 250, 0.8);
+	color: white;
+}
+
+/* ===== SCROLL ===== */
+.modal__scroll {
+	max-height: calc(100dvh - 160px);
+	overflow-y: auto;
+
+	margin-top: 15px;
+	padding-right: 8px;
+}
+
+/* scrollbar */
+.modal__scroll::-webkit-scrollbar {
+	width: 6px;
+}
+
+.modal__scroll::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, #60a5fa, #a78bfa);
+	border-radius: 10px;
+}
+
+/* ===== FOCUS ===== */
+:focus {
+	outline: 2px solid #60a5fa;
+	outline-offset: 2px;
+}
+
+/* ===== ANIMACJE ===== */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateY(40px) scale(0.98);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0) scale(1);
+		opacity: 1;
+	}
+}

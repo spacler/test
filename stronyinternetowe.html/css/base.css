@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* body */
+
+body {
+	overflow-x: hidden;
+	font-family: 'Segoe UI', system-ui, sans-serif;
+	line-height: 1.6;
+
+	background:
+		radial-gradient(circle at 20% 30%, rgba(59, 130, 246, 0.25), transparent 40%),
+		radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.25), transparent 40%), linear-gradient(135deg, #0f172a, #020617);
+
+	color: white;
+}
+
+/* linki */
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* listy */
+
+ul {
+	list-style: none;
+}
+
+/* sekcje */
+
+/* nagłówki */
+
+h1 {
+	font-size: 48px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 36px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 22px;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+
+/* tekst */
+
+p {
+	opacity: 0.8;
+	font-size: 17px;
+}
+
+/* przycisk */
+
+.btn {
+	background: #facc15;
+	color: #0f172a;
+	padding: 14px 30px;
+	border-radius: 8px;
+	font-weight: 600;
+	margin-top: 25px;
+	display: inline-block;
+	transition: 0.2s;
+}
+
+.btn:hover {
+	background: #eab308;
+}
+
+/* skip link WCAG */
+
+.skip-link {
+	position: absolute;
+	left: -9999px;
+}
+
+.skip-link:focus {
+	left: 20px;
+	top: 20px;
+	background: #0f172a;
+	color: white;
+	padding: 10px 14px;
+	border-radius: 6px;
+	z-index: 999;
+}
+
+/* karty */
+
+.card {
+	background: white;
+	padding: 30px;
+	border-radius: 14px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+	transition: all 0.25s ease;
+}
+
+.card:hover {
+	transform: translateY(-6px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
