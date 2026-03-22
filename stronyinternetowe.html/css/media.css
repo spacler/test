@@ -300,5 +300,17 @@ gap:16px;
 
 }
 
+@media (max-width:768px){
+
+section{
+padding:80px 0;
+}
+
+}
+
+
+.service-card{
+padding:24px;
+}
 
 
