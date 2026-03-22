@@ -252,3 +252,53 @@ font-size:18px;
   }
 }
 
+
+@media (max-width:768px){
+
+#faq{
+padding:0;
+margin:80px 0 0;
+max-width:none;
+}
+
+}
+
+@media (max-width:768px){
+
+.contact-section{
+padding:0;
+margin:80px 0 0;
+max-width:none;
+}
+
+.contact-form{
+border-radius:0; /* 🔥 ważne */
+}
+
+}
+
+@media (max-width:768px){
+
+.service-card{
+border-radius:0;
+}
+
+}
+
+@media (max-width:768px){
+
+#services .grid{
+padding:0;
+max-width:none;
+margin:0;
+}
+
+.grid{
+grid-template-columns:1fr;
+gap:16px;
+}
+
+}
+
+
+
