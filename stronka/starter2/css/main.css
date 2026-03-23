@@ -1,0 +1,70 @@
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 40px 20px;
+}
+
+/* SEKCJA */
+.service {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	margin-bottom: 60px;
+}
+
+/* TEKST */
+.service-text {
+	flex: 1;
+}
+
+.service-text h2 {
+	font-size: 1.8rem;
+	margin-bottom: 10px;
+	color: #f9fafb;
+}
+
+.service-text p {
+	color: #d1d5db;
+	line-height: 1.7;
+}
+
+/* OBRAZ */
+.service-image {
+	flex: 1;
+}
+
+.service-image img {
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+	display: block;
+
+	/* wydajność */
+	object-fit: cover;
+}
+
+/* 🔥 NAPRZEMIENNOŚĆ */
+.service:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+	.service {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+/* ♿ FOCUS (WCAG!) */
+a:focus,
+button:focus {
+	outline: 3px solid #3b82f6;
+	outline-offset: 2px;
+}
+
+/* ♿ KONTRAST */
+body {
+	background: #020617;
+	color: #f1f5f9;
+}

@@ -1,0 +1,20 @@
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .service {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ♿ FOCUS (WCAG!) */
+a:focus,
+button:focus {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* ♿ KONTRAST */
+body {
+  background: #020617;
+  color: #f1f5f9;
+}
