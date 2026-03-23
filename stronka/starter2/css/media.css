@@ -1,20 +1,27 @@
-/* 📱 MOBILE */
+/* 🔥 desktop tylko */
+@media (min-width: 769px) {
+	.service:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+}
+
+/* 📱 MOBILE – zawsze: tekst → obraz */
 @media (max-width: 768px) {
-  .service {
-    flex-direction: column;
-    text-align: center;
-  }
-}
 
-/* ♿ FOCUS (WCAG!) */
-a:focus,
-button:focus {
-  outline: 3px solid #3b82f6;
-  outline-offset: 2px;
-}
+	.service {
+		flex-direction: column;
+		gap: 20px;
+	}
 
-/* ♿ KONTRAST */
-body {
-  background: #020617;
-  color: #f1f5f9;
+	/* 🔥 wymuś kolejność dla KAŻDEJ sekcji */
+	.service .service-text {
+		order: 1 !important;
+		width: 100%;
+	}
+
+	.service .service-image {
+		order: 2 !important;
+		width: 100%;
+		max-width: 100%;
+	}
 }
