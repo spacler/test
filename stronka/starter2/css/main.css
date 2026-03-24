@@ -54,12 +54,10 @@ section {
 /* SERVICES (TEXT ONLY) */
 /* ===================== */
 .service {
-	
 	max-width: 800px;
 	margin: 0 auto 40px auto;
 	padding: 30px;
 	background: rgba(255, 255, 255, 0.02);
-	
 }
 
 /* TEKST */

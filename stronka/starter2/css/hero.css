@@ -12,15 +12,15 @@
 
 	padding: 120px 20px;
 
-	background: url('../assets/hero.jpg') center/cover no-repeat;
+	background:linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), url('../assets/ChatGPT\ Image\ 24\ mar\ 2026\,\ 23_56_35.png') center/cover no-repeat;
 }
+
 
 /* ciemna warstwa */
 .hero-overlay {
 	position: absolute;
 	inset: 0;
-
-	
+	background: rgba(0, 0, 0, 0.65); /* 🔥 kluczowe */
 }
 
 /* content */
@@ -34,6 +34,7 @@
 }
 
 .hero-content h1 {
+    
 	font-size: clamp(32px, 5vw, 56px);
 	margin-bottom: 20px;
 }

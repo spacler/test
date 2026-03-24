@@ -1,0 +1,27 @@
+[33m7261e19[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: pull --rebase --strategy=ours (finish): returning to refs/heads/main
+[33m7261e19[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: pull --rebase --strategy=ours (start): checkout 7261e19e24a75b8a85dc287d49c1939a2c1ad3c6
+[33m3e55b7e[m HEAD@{2}: rebase (abort): returning to refs/heads/main
+[33m7261e19[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{3}: pull --rebase (start): checkout 7261e19e24a75b8a85dc287d49c1939a2c1ad3c6
+[33m3e55b7e[m HEAD@{4}: commit: update
+[33m95b0f6e[m HEAD@{5}: commit: update
+[33me9cbc7a[m HEAD@{6}: pull --rebase (finish): returning to refs/heads/main
+[33me9cbc7a[m HEAD@{7}: pull --rebase (pick): update
+[33m47db270[m HEAD@{8}: pull --rebase (start): checkout 47db270a3ef464fd9643c2c2b44d06b1d9b10ff4
+[33ma571305[m HEAD@{9}: commit: update
+[33mad0d840[m HEAD@{10}: commit: update
+[33m3a57cf9[m HEAD@{11}: commit: update
+[33mfc34765[m HEAD@{12}: commit: update
+[33m7d929e1[m HEAD@{13}: rebase (finish): returning to refs/heads/main
+[33m7d929e1[m HEAD@{14}: rebase (continue): update
+[33m017cf2c[m HEAD@{15}: pull origin main --rebase (start): checkout 017cf2c12d861f1a39511ecaf613dd1f731429dc
+[33mdddaa8f[m HEAD@{16}: commit: update
+[33ma64f3f7[m HEAD@{17}: commit: update
+[33mf6196df[m HEAD@{18}: pull --rebase (finish): returning to refs/heads/main
+[33mf6196df[m HEAD@{19}: pull --rebase (pick): update
+[33m7315cef[m HEAD@{20}: pull --rebase (start): checkout 7315cefe8300f8780c4e371ad76614311288b389
+[33ma0a7510[m HEAD@{21}: commit: update
+[33mab1260d[m HEAD@{22}: commit: update: improve layout, responsive styles and contact form
+[33md5e6b76[m HEAD@{23}: commit: update strony
+[33m6426a4b[m HEAD@{24}: commit: aktualizacja strony
+[33m084912e[m HEAD@{25}: commit: dodano starter
+[33ma2b76ee[m HEAD@{26}: clone: from https://github.com/spacler/test
