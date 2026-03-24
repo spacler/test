@@ -7,7 +7,6 @@
 
 /* 📱 MOBILE – zawsze: tekst → obraz */
 @media (max-width: 768px) {
-
 	.service {
 		flex-direction: column;
 		gap: 20px;
@@ -23,5 +22,16 @@
 		order: 2 !important;
 		width: 100%;
 		max-width: 100%;
+	}
+}
+
+/* 📱 tablet i wyżej */
+@media (min-width: 769px) {
+	.service {
+		align-items: flex-start; /* 🔥 wszystko do góry */
+	}
+
+	.service-text {
+		align-self: flex-start; /* 🔥 pewniak dla tekstu */
 	}
 }
