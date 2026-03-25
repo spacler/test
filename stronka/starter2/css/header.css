@@ -72,18 +72,3 @@
 .nav-menu a:hover::after {
     width: 100%;
 }
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .flex-header {
-        flex-direction: column;
-        height: auto;
-        padding: 20px 0;
-        gap: 15px;
-    }
-
-    .nav-menu {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
