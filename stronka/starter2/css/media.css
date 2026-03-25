@@ -35,3 +35,26 @@
 		align-self: flex-start; /* 🔥 pewniak dla tekstu */
 	}
 }
+/* HERO FIX MOBILE */
+.hero {
+	background: url('../assets/obd.png') center/cover no-repeat;
+	background-color: #020617; /* fallback */
+}
+
+.hero-overlay {
+	background: linear-gradient(
+		to bottom,
+		rgba(0,0,0,0.5),
+		rgba(0,0,0,0.7)
+	);
+}
+
+@media (max-width: 768px) {
+	.hero {
+		background-position: center top;
+	}
+
+	.hero-overlay {
+		background: rgba(0, 0, 0, 0.4);
+	}
+}
