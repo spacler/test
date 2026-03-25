@@ -1,6 +1,4 @@
-
-
-/* kontener max 1200px */
+/* kontener */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -10,14 +8,14 @@
 /* header */
 .main-header {
     width: 100%;
-    background: #0f172a; /* ciemny nowoczesny */
+    background: #0f172a;
     color: #fff;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-/* flex layout */
+/* FLEX zawsze w jednym rzędzie */
 .flex-header {
     display: flex;
     align-items: center;
@@ -29,11 +27,10 @@
 .logo {
     font-size: 24px;
     font-weight: 700;
-    letter-spacing: 1px;
 }
 
 .logo span {
-    color: #38bdf8; /* akcent */
+    color: #38bdf8;
 }
 
 /* menu */
@@ -48,27 +45,42 @@
     text-decoration: none;
     color: #e5e7eb;
     font-size: 16px;
-    font-weight: 500;
     position: relative;
     transition: 0.3s;
 }
 
-/* hover efekt underline */
+/* underline */
 .nav-menu a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: -4px;
     width: 0%;
     height: 2px;
     background: #38bdf8;
     transition: 0.3s;
 }
 
-.nav-menu a:hover {
-    color: #fff;
-}
-
 .nav-menu a:hover::after {
     width: 100%;
+}
+
+/* 🔥 MOBILE — dalej poziomo */
+@media (max-width: 768px) {
+
+    .flex-header {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
 }
