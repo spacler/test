@@ -1,22 +1,38 @@
 /* kontener */
 .container {
+<<<<<<< HEAD
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 20px;
+=======
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+>>>>>>> f2b2e533d11549ca07f6fdb5627beda27309fd04
 }
 
 /* header */
 .main-header {
+<<<<<<< HEAD
 	width: 100%;
 	background: #0f172a;
 	color: #fff;
 	position: sticky;
 	top: 0;
 	z-index: 1000;
+=======
+    width: 100%;
+    background: #0f172a;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+>>>>>>> f2b2e533d11549ca07f6fdb5627beda27309fd04
 }
 
 /* FLEX zawsze w jednym rzędzie */
 .flex-header {
+<<<<<<< HEAD
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -43,26 +59,57 @@
 
 	color: transparent;
 	-webkit-text-fill-color: transparent;
+=======
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+/* logo */
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #38bdf8;
+>>>>>>> f2b2e533d11549ca07f6fdb5627beda27309fd04
 }
 
 /* menu */
 .nav-menu {
+<<<<<<< HEAD
 	list-style: none;
 	display: flex;
 	gap: 30px;
+=======
+    list-style: none;
+    display: flex;
+    gap: 30px;
+>>>>>>> f2b2e533d11549ca07f6fdb5627beda27309fd04
 }
 
 /* linki */
 .nav-menu a {
+<<<<<<< HEAD
 	text-decoration: none;
 	color: #e5e7eb;
 	font-size: 16px;
 	position: relative;
 	transition: 0.3s;
+=======
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 16px;
+    position: relative;
+    transition: 0.3s;
+>>>>>>> f2b2e533d11549ca07f6fdb5627beda27309fd04
 }
 
 /* underline */
 .nav-menu a::after {
+<<<<<<< HEAD
 	content: '';
 	position: absolute;
 	left: 0;
@@ -75,10 +122,25 @@
 
 .nav-menu a:hover::after {
 	width: 100%;
+=======
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+>>>>>>> f2b2e533d11549ca07f6fdb5627beda27309fd04
 }
 
 /* 🔥 MOBILE — dalej poziomo */
 @media (max-width: 768px) {
+<<<<<<< HEAD
 	.flex-header {
 		height: 60px;
 	}
@@ -95,3 +157,22 @@
 		font-size: 14px;
 	}
 }
+=======
+
+    .flex-header {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+}
+>>>>>>> f2b2e533d11549ca07f6fdb5627beda27309fd04
