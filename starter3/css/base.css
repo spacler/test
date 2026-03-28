@@ -1,0 +1,65 @@
+/* RESET */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* 🔥 HTML + BODY (KLUCZ DO TŁA) */
+	html, body {
+	background:
+		
+		linear-gradient(180deg, #000000 0%, #020617 40%, #020617 100%);
+		color: white;
+}
+
+/* FONT + RENDER */
+body {
+	font-family: 'Segoe UI', system-ui, sans-serif;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* ===================== */
+/* OBRAZKI W SERVICE */
+/* ===================== */
+
+.service-image {
+	margin-top: 20px;
+	
+	overflow: hidden;
+}
+
+/* obraz */
+.service-image img {
+	width: 100%;
+	height: 400px; /* 🔥 kontrola wysokości */
+	object-fit: cover;
+
+	display: block;
+	
+
+	transition: 0.3s;
+}
+
+/* hover */
+.service-image:hover img {
+	transform: scale(1.03);
+}
+
+/* lekki overlay (czytelność) */
+.service-image::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(2,6,23,0.2);
+}
+
+/* ważne */
+.service-image {
+	position: relative;
+}
+
+
