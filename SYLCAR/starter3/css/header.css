@@ -1,0 +1,106 @@
+/* kontener */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* header */
+.main-header {
+    width: 100%;
+    background: #020617;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* FLEX zawsze w jednym rzędzie */
+.flex-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+/* logo */
+
+/*.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #38bdf8;
+}*/
+
+.logo-fire {
+	font-weight: 800; /* 🔥 bold */
+	font-size: 24px;  /* opcjonalnie jak chcesz większe */
+
+	background: linear-gradient(
+		to top,
+		#ef4444,
+		#f97316,
+		#facc15,
+		#ffffff
+	);
+
+	background-clip: text;
+	-webkit-background-clip: text;
+
+	color: transparent;
+	-webkit-text-fill-color: transparent;
+}
+
+/* menu */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* linki */
+.nav-menu a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 16px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* underline */
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* 🔥 MOBILE — dalej poziomo */
+@media (max-width: 768px) {
+
+    .flex-header {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .nav-menu a {
+        font-size: 14px;
+    }
+}

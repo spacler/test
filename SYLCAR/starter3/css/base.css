@@ -7,16 +7,16 @@
 	box-sizing: border-box;
 }
 
-/* 🔥 HTML + BODY (KLUCZ DO TŁA) */
-html,
-body {
-	min-height: 100%;
-	background:
-		radial-gradient(circle at 20% 30%, rgba(59,130,246,0.15), transparent 40%),
-		radial-gradient(circle at 80% 70%, rgba(168,85,247,0.15), transparent 40%),
-		#020617;
+html {
+    scroll-behavior: smooth;
+}
 
-	
+/* 🔥 HTML + BODY (KLUCZ DO TŁA) */
+	html, body {
+	background:
+		
+		linear-gradient(180deg, #000000 0%, #020617 40%, #020617 100%);
+		color: white;
 }
 
 /* FONT + RENDER */
@@ -24,6 +24,10 @@ body {
 	font-family: 'Segoe UI', system-ui, sans-serif;
 	line-height: 1.6;
 	-webkit-font-smoothing: antialiased;
+}
+
+section {
+	margin-top: 40px;
 }
 
 /* ===================== */

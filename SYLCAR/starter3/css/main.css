@@ -7,9 +7,7 @@
 	padding: 40px 20px;
 }
 
-section {
-	margin-top: 40px;
-}
+
 
 /* ===================== */
 /* CONTAINER */
@@ -99,9 +97,10 @@ section {
 .cta-contact {
 	margin: 80px 0;
 	padding: 60px 20px;
-	border-radius: 20px;
+	
+	background: rgba(255, 255, 255, 0.02);
 
-	background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(168, 85, 247, 0.15));
+
 
 	text-align: center;
 }

@@ -35,3 +35,40 @@
 		align-self: flex-start; /* 🔥 pewniak dla tekstu */
 	}
 }
+/* HERO FIX MOBILE */
+.hero {
+	background: url('../assets/obd.png') center/cover no-repeat;
+	background-color: #020617; /* fallback */
+}
+
+.hero-overlay {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+}
+
+@media (max-width: 768px) {
+	.hero {
+		background-position: center top;
+	}
+
+	.hero-overlay {
+		background: rgba(0, 0, 0, 0.4);
+	}
+}
+@media (max-width: 768px) {
+	.hero-content {
+		color: #e2e8f0;
+	}
+
+	.hero-content h1 {
+		color: #f1f5f9;
+
+		text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+	}
+
+	.hero-content p {
+		color: #cbd5f5;
+		opacity: 0.85;
+
+		text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+	}
+}
