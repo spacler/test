@@ -1,0 +1,288 @@
+/* WRAPPER */
+.auth-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 20px;
+	background: #020617; /* tło pod kontenerem */
+}
+
+.auth-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	width: 100%;
+	max-width: 1200px; /* 🔥 KLUCZ */
+
+	border-radius: 18px;
+	overflow: hidden;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+
+	margin: 0 auto; /* 🔥 CENTROWANIE */
+}
+
+
+/* LEWA STRONA */
+.auth-image {
+    background: url('../assets/obd.png') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    /* ZMIANA: center zamiast flex-end, aby tekst był w połowie wysokości */
+    align-items: center; 
+    /* ZMIANA: center, aby kontener z tekstem był w połowie szerokości */
+    justify-content: center; 
+    padding: 40px;
+    text-align: center; /* Wyśrodkowanie samych liter wewnątrz h2 i p */
+}
+.auth-image::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(to top, rgba(2, 6, 23, 0.95), rgba(2, 6, 23, 0.2));
+}
+
+
+.auth-image-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    /* Opcjonalnie: ogranicz szerokość tekstu, żeby ładniej wyglądał w środku */
+    max-width: 80% ; 
+}
+
+.auth-image-content h2 {
+    font-size: 32px; /* Możesz go trochę powiększyć, skoro jest na środku */
+    margin-bottom: 15px;
+}
+
+.auth-image-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+
+
+/* PRAWA STRONA */
+.auth-box {
+	background: rgba(15, 23, 42, 0.95);
+	padding: 40px;
+	display: flex;
+	flex-direction: column;
+
+	/* USTALAMY STAŁĄ WYSOKOŚĆ */
+	/* Dopasuj tę wartość (np. 550px lub 600px), aby zmieścił się najdłuższy formularz */
+	height: 800px;
+	position: relative;
+	overflow: hidden; /* zapobiega wystawaniu elementów podczas animacji */
+}
+
+.form-title {
+	color: white;
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+/* TABS */
+.auth-tabs {
+	display: flex;
+	margin-bottom: 30px;
+	background: #020617;
+	border-radius: 12px;
+	padding: 5px;
+	position: relative;
+	z-index: 10; /* zawsze nad formularzami */
+}
+
+.auth-tabs button {
+	flex: 1;
+	padding: 10px;
+	border: none;
+	background: transparent;
+	color: #94a3b8;
+	cursor: pointer;
+	border-radius: 8px;
+	transition: 0.3s;
+}
+
+.auth-tabs button.active {
+	background: #38bdf8;
+	color: #020617;
+	font-weight: 600;
+}
+
+/* FORMULARZE */
+.contact-form {
+	position: absolute;
+	/* 40px paddingu + ok. 50px na zakładki = startujemy od 100px od góry */
+	top: 100px;
+	left: 40px;
+	right: 40px;
+
+	display: flex;
+	flex-direction: column;
+	transition: all 0.4s ease-in-out;
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.is-hidden {
+	opacity: 0;
+	pointer-events: none;
+	transform: translateX(-20px); /* delikatny efekt przesunięcia */
+	/* display: none; <-- Usuwamy to, bo gryzie się z animacją opacity */
+	visibility: hidden;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* INPUTY */
+.form-group {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 12px;
+}
+
+.form-group label {
+	color: #94a3b8;
+	font-size: 13px;
+	margin-bottom: 5px;
+}
+
+.form-group.checkbox {
+	flex-direction: row; /* Układa input i label w jednej linii */
+	align-items: center; /* Wyrównuje checkbox pionowo do środka tekstu */
+	gap: 10px; /* Odstęp między checkboxem a tekstem */
+	margin-top: 10px; /* Dodatkowy odstęp od pola hasła */
+	cursor: pointer;
+}
+
+/* Specyficzny styl dla grupy z checkboxem */
+.form-group.checkbox {
+	flex-direction: row; /* Układa input i label w jednej linii */
+	align-items: center; /* Wyrównuje checkbox pionowo do środka tekstu */
+	gap: 10px; /* Odstęp między checkboxem a tekstem */
+	margin-top: 10px; /* Dodatkowy odstęp od pola hasła */
+	cursor: pointer;
+}
+
+/* Usuwamy margines dolny labela wewnątrz checkboxa, żeby nie psuł wyrównania */
+.form-group.checkbox label {
+	margin-bottom: 0;
+	color: #e2e8f0; /* Jaśniejszy kolor dla lepszej czytelności */
+	cursor: pointer; /* Kliknięcie w tekst też zaznaczy checkbox */
+	font-size: 14px;
+}
+
+/* Opcjonalnie: powiększenie samego kwadracika checkboxa */
+.form-group.checkbox input[type='checkbox'] {
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+	accent-color: #38bdf8; /* Zmienia kolor zaznaczenia na niebieski (pasuje do buttona) */
+}
+
+input {
+	padding: 12px;
+	border-radius: 10px;
+	border: 1px solid #1e293b;
+	background: #020617;
+	color: #e2e8f0;
+}
+
+input:focus {
+	outline: none;
+	border-color: #38bdf8;
+}
+
+/* OPCJE I PRZYCISKI */
+.form-options {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0 20px;
+	font-size: 13px;
+}
+
+.forgot {
+	color: #38bdf8;
+	text-decoration: none;
+}
+
+.contact-btn {
+	padding: 14px;
+	border-radius: 10px;
+	border: none;
+	background: #38bdf8;
+	font-weight: 700;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.contact-btn:hover {
+	background: #0ea5e9;
+}
+
+.error {
+	color: #f87171;
+	font-size: 11px;
+	min-height: 15px;
+	margin-top: 2px;
+}
+/* regulacja oka podgladu hasla  */
+.password-wrapper {
+	position: relative; /* Kotwica dla ikony oka */
+	display: flex;
+	flex-direction: column;
+}
+
+.password-wrapper label {
+	margin-bottom: 5px; /* Stały odstęp dla przewidywalności */
+}
+
+.password-wrapper input {
+	width: 100%;
+	padding-right: 45px; /* Miejsce wewnątrz, żeby tekst nie nachodził na oko */
+}
+
+.toggle-pass {
+	position: absolute;
+	right: 12px;
+	/* Obliczamy: Wysokość labela (ok. 20px) + margines (5px) + środek inputa */
+	top: 25px;
+
+	cursor: pointer;
+	color: #94a3b8;
+	font-size: 18px;
+	z-index: 10;
+	user-select: none; /* Zapobiega zaznaczaniu ikony przy szybkim klikaniu */
+	transition: color 0.2s;
+
+	/* Wyśrodkowanie pionowe ikony wewnątrz jej własnej wysokości */
+	display: flex;
+	align-items: center;
+	height: 45px; /* Powinno być równe wysokości inputa */
+}
+
+.toggle-pass:hover {
+	color: #38bdf8;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+	.auth-container {
+		grid-template-columns: 1fr;
+	}
+	.auth-image {
+		display: none;
+	}
+}
