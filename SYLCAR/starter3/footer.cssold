@@ -1,5 +1,194 @@
    style 
+/* ==========================================
+   SITE FOOTER - CLEAN VERSION (DOPASOWANY DO HERO)
+   ========================================== */
 
+.site-footer {
+    background-color: #020617;
+    color: #cbd5e1;
+    padding: 60px 0 20px;
+
+    /* CIENKA, STALOWA LINIA - nie gryzie się z ogniem */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    /* Delikatny, neutralny cień */
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
+}
+/* UKŁAD KOLUMN */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-bottom: 40px;
+    align-items: start;
+}
+
+.footer-col {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-title {
+    color: #ffffff; 
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* AKORDEONY (details) */
+.faq details {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+.faq details[open] {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: #3b82f6;
+}
+
+.faq summary {
+    font-weight: 600;
+    color: #f9fafb;
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0 25px;
+}
+
+.faq summary::after {
+    content: '+';
+    position: absolute;
+    right: 10px;
+    color: #3b82f6; 
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.faq details[open] summary::after {
+    content: '−';
+}
+
+/* TREŚĆ I FORMULARZ */
+.faq-content {
+    margin-top: 15px;
+    animation: fadeIn 0.4s ease;
+}
+
+.footer-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.footer-contact-form input,
+.footer-contact-form select,
+.footer-contact-form textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    color: white;
+    padding: 12px;
+    border-radius: 10px; /* Spójne z .btn w Hero */
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+    text-align-last: center;
+    appearance: none;
+    cursor: pointer;
+}
+
+.footer-btn {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.footer-btn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* DOLNY PASEK */
+.footer-bottom {
+    background: #01040a;
+    border-top: 1px solid rgba(59, 130, 246, 0.1);
+    padding: 25px 0;
+}
+
+.footer-bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-socials a {
+    color: #64748b;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.footer-socials a:hover {
+    color: #3b82f6;
+    transform: translateY(-3px);
+}
+
+.footer-legal-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-legal-nav a {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.footer-legal-nav a:hover { color: #3b82f6; }
+
+/* MAPA */
+.mini-map {
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    width: 100%;
+}
+
+/* RESPONSYWNOŚĆ */
+@media (max-width: 992px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 50px; }
+    .footer-bottom-flex { flex-direction: column; text-align: center; }
+    .footer-socials { order: -1; }
+    .footer-legal-nav { justify-content: center; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 style
  
 
