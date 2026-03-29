@@ -1,8 +1,8 @@
 /* kontener */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
 
 /* header */
@@ -13,14 +13,22 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding: 12px 0;
+
+    
+
+/* Żeby logo nie "krzyczało", możemy mu też zdjąć jaskrawość */
+.logo-fire {
+    /* Twój gradient zostaje, ale dodajemy mu lekką przezroczystość lub mniejszy shadow */
+    filter: drop-shadow(0 0 5px rgba(249, 115, 22, 0.2));
 }
 
 /* FLEX zawsze w jednym rzędzie */
 .flex-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
 }
 
 /* logo */
@@ -36,15 +44,9 @@
 
 .logo-fire {
 	font-weight: 800; /* 🔥 bold */
-	font-size: 24px;  /* opcjonalnie jak chcesz większe */
+	font-size: 24px; /* opcjonalnie jak chcesz większe */
 
-	background: linear-gradient(
-		to top,
-		#ef4444,
-		#f97316,
-		#facc15,
-		#ffffff
-	);
+	background: linear-gradient(to top, #ef4444, #f97316, #facc15, #ffffff);
 
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -55,52 +57,130 @@
 
 /* menu */
 .nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+	list-style: none;
+	display: flex;
+	gap: 30px;
 }
 
 /* linki */
 .nav-menu a {
-    text-decoration: none;
-    color: #e5e7eb;
-    font-size: 16px;
-    position: relative;
-    transition: 0.3s;
+	text-decoration: none;
+	color: #e5e7eb;
+	font-size: 16px;
+	position: relative;
+	transition: 0.3s;
 }
 
 /* underline */
 .nav-menu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0%;
-    height: 2px;
-    background: #38bdf8;
-    transition: 0.3s;
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	width: 0%;
+	height: 2px;
+	background: #38bdf8;
+	transition: 0.3s;
 }
 
 .nav-menu a:hover::after {
-    width: 100%;
+	width: 100%;
+}
+/* Styl przycisku hamburgera (ukryty domyślnie) */
+.hamburger {
+	display: none;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 30px;
+	height: 25px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	z-index: 2000; /* Powyżej modala */
+	padding: 0;
 }
 
-/* 🔥 MOBILE — dalej poziomo */
-@media (max-width: 768px) {
+.hamburger .bar {
+	width: 100%;
+	height: 3px;
+	background-color: #38bdf8; /* Twój błękit */
+	border-radius: 10px;
+	transition: all 0.3s ease;
+}
 
+/* --- MOBILE STYLES --- */
+/* --- STYLE PODSTAWOWE (Desktop) --- */
+.hamburger {
+    display: none; /* Ukryty na komputerach */
+}
+
+/* --- STYLE MOBILE (Naprawione) --- */
+@media (max-width: 768px) {
+    
+    /* Header dopasowany do mobile */
     .flex-header {
         height: 60px;
     }
 
-    .logo {
+    .logo-fire {
         font-size: 18px;
     }
 
+    /* Pokazujemy hamburgera */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Menu jako Full Screen Modal */
+    .nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(2, 6, 23, 0.98); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s ease-in-out;
+        z-index: 1500;
+    }
+
+    /* Klasa dodawana przez JS - otwarcie menu */
+    .nav-container.active {
+        right: 0;
+    }
+
+    /* PIONOWE MENU - WAŻNE: To musi być tutaj, żeby nie było nadpisane */
     .nav-menu {
-        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px; /* Duże odstępy pod kciuk */
+        display: flex; /* Upewniamy się, że widać listę */
     }
 
     .nav-menu a {
-        font-size: 14px;
+        font-size: 22px; /* Czytelny tekst w modalu */
+        color: #fff;
+    }
+
+    /* Wyłączamy podkreślenie na hover na mobile (często przeszkadza) */
+    .nav-menu a::after {
+        display: none;
+    }
+
+    /* Animacja Hamburgera */
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    body.no-scroll {
+        overflow: hidden;
     }
 }

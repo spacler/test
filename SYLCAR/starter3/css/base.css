@@ -1,73 +1,80 @@
-/* RESET */
+/* ==========================================
+   RESET & PODSTAWY
+   ========================================== */
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+    /* Tło strony - płynne przejście z czerni w głęboki granat */
+    background: linear-gradient(180deg, #000000 0%, #020617 40%, #020617 100%);
 }
 
-/* 🔥 HTML + BODY (KLUCZ DO TŁA) */
-	html, body {
-	background:
-		
-		linear-gradient(180deg, #000000 0%, #020617 40%, #020617 100%);
-		color: white;
-}
-
-/* FONT + RENDER */
 body {
-	font-family: 'Segoe UI', system-ui, sans-serif;
-	line-height: 1.6;
-	-webkit-font-smoothing: antialiased;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+/* ==========================================
+   NAWIGACJA WEWNĘTRZNA (KOTWICE)
+   ========================================== */
+
+/* Margines dla sekcji z ID, żeby stały Header nie zasłaniał tytułów */
+#uslugi, 
+#footer-contact, 
+#about {
+    scroll-margin-top: 100px; 
 }
 
 section {
-	margin-top: 40px;
+    margin-top: 40px;
 }
 
-/* ===================== */
-/* OBRAZKI W SERVICE */
-/* ===================== */
+/* ==========================================
+   SEKCJE USŁUG (OBRAZKI)
+   ========================================== */
 
 .service-image {
-	margin-top: 20px;
-	
-	overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+    border-radius: 12px; /* Dodałem lekkie zaokrąglenie dla nowoczesnego wyglądu */
+    overflow: hidden;
 }
 
-/* obraz */
 .service-image img {
-	width: 100%;
-	height: 400px; /* 🔥 kontrola wysokości */
-	object-fit: cover;
-
-	display: block;
-	
-
-	transition: 0.3s;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
 }
 
-/* hover */
-.service-image:hover img {
-	transform: scale(1.03);
-}
-
-/* lekki overlay (czytelność) */
+/* Lekki overlay dla lepszej spójności z tłem */
 .service-image::after {
-	content: "";
-	position: absolute;
-	inset: 0;
-	background: rgba(2,6,23,0.2);
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 6, 23, 0.2);
+    pointer-events: none;
 }
 
-/* ważne */
-.service-image {
-	position: relative;
+/* Efekt najechania na zdjęcie */
+.service-image:hover img {
+    transform: scale(1.03);
 }
 
-
+/* ==========================================
+   ANIMACJE
+   ========================================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

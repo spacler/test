@@ -42,15 +42,7 @@
 }
 
 .hero-overlay {
-<<<<<<< HEAD:SYLCAR/starter3/css/media.css
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
-=======
-	background: linear-gradient(
-		to bottom,
-		rgba(0,0,0,0.5),
-		rgba(0,0,0,0.7)
-	);
->>>>>>> 84394c76f3ee143aa934883d195de062ed1b4e34:stronka/starter2/css/media.css
 }
 
 @media (max-width: 768px) {
@@ -63,10 +55,6 @@
 	}
 }
 @media (max-width: 768px) {
-<<<<<<< HEAD:SYLCAR/starter3/css/media.css
-=======
-
->>>>>>> 84394c76f3ee143aa934883d195de062ed1b4e34:stronka/starter2/css/media.css
 	.hero-content {
 		color: #e2e8f0;
 	}
@@ -74,23 +62,13 @@
 	.hero-content h1 {
 		color: #f1f5f9;
 
-<<<<<<< HEAD:SYLCAR/starter3/css/media.css
 		text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-=======
-		text-shadow:
-			0 2px 6px rgba(0,0,0,0.6);
->>>>>>> 84394c76f3ee143aa934883d195de062ed1b4e34:stronka/starter2/css/media.css
 	}
 
 	.hero-content p {
 		color: #cbd5f5;
 		opacity: 0.85;
 
-<<<<<<< HEAD:SYLCAR/starter3/css/media.css
 		text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-=======
-		text-shadow:
-			0 1px 4px rgba(0,0,0,0.5);
->>>>>>> 84394c76f3ee143aa934883d195de062ed1b4e34:stronka/starter2/css/media.css
 	}
 }

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel klienta - SYLCAR</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/panel.css">
+    <link rel="stylesheet" href="css/footer-panelklienta.css">
+</head>
+
+<body>
+<header class="main-header">
+    <div class="container flex-header">
+        <div class="logo">
+            <span class="logo-fire">SYLCAR</span>
+        </div>
+
+        <button class="hamburger" aria-label="Otwórz menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="nav-container" aria-label="Główne">
+            <ul class="nav-menu">
+                <li><a href="index.html#about">O nas</a></li>
+                <li><a href="index.html#contact">Kontakt</a></li>
+                <li><a href="panelklienta.html#panel-klienta">Panel klienta</a></li>
+                <li><a href="auth.html">Zaloguj</a></li>
+                <li><a href="auth.html#register" class="nav-btn">Zarejestruj</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main class="panel-container">
+        <div class="container flex-main">
+
+            <aside class="panel-sidebar">
+                <nav class="panel-nav">
+                    <h3>Twoje Naprawy</h3>
+                    <ul>
+                        <li><a href="#active" class="active">Aktualne zlecenia</a></li>
+                        <li><a href="#history">Historia napraw</a></li>
+                        <li><a href="#costs">Koszty i faktury</a></li>
+                    </ul>
+
+                    <h3>Nadchodzący przegląd</h3>
+                    <ul>
+                        <li><a href="#engine">Silnik i rozrząd</a></li>
+                        <li><a href="#brakes">Układ hamulcowy</a></li>
+                        <li><a href="#suspension">Zawieszenie</a></li>
+                    </ul>
+
+                    <h3>Ustawienia</h3>
+                    <ul>
+                        <li><a href="#profile">Dane profilowe</a></li>
+                        <li><a href="#cars">Moje pojazdy</a></li>
+                        <li><a href="#logout" class="logout-link">Wyloguj</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <section class="panel-content">
+                <div class="content-card">
+                    <h2>Aktualne zlecenia</h2>
+                    <div class="status-box">
+                        <p><strong>Pojazd:</strong> Audi A4 (WA 12345)</p>
+                        <p><strong>Status:</strong> <span class="badge badge-work">W trakcie naprawy</span></p>
+                        <p><strong>Przewidywany odbiór:</strong> Jutro, 16:00</p>
+                    </div>
+
+                    <hr>
+
+                    <h3>Szczegóły serwisu</h3>
+                    <p>Wymiana klocków hamulcowych oraz płynu eksploatacyjnego. Mechanik stwierdził konieczność
+                        sprawdzenia
+                        tarcz.</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <h3 class="footer-heading">FAQ</h3>
+            <div class="accordion">
+                <details>
+                    <summary>Jak umówić wizytę?</summary>
+                    <p>Zadzwoń do nas lub skorzystaj z formularza w panelu klienta.</p>
+                </details>
+                <details>
+                    <summary>Ile trwa diagnostyka?</summary>
+                    <p>Zazwyczaj od 30 do 60 minut na miejscu.</p>
+                </details>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Informacje Prawne</h3>
+            <div class="accordion">
+                <details>
+                    <summary>Polityka Prywatności</summary>
+                    <p>Twoje dane są u nas bezpieczne.</p>
+                </details>
+                <details>
+                    <summary>Regulamin</summary>
+                    <p>Ogólne warunki świadczenia usług SYLCAR.</p>
+                </details>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Kontakt</h3>
+            <div class="contact-box">
+                <p>📍 ul. Mechaników 12, Warszawa</p>
+                <p>📞 +48 500 600 700</p>
+                <div class="hours">
+                    Pn-Pt: 8:00 - 18:00<br>
+                    Sob: 9:00 - 14:00
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer-copyright">
+        <p>&copy; 2026 SYLCAR</p>
+    </div>
+</footer>
+<script src="js/modalmenu.js"></script>
+
+</body>
+
+</html>

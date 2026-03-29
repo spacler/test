@@ -9,29 +9,37 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/auth.css">
-    <link rel="stylesheet" href="css/footer2.css">
+    <link rel="stylesheet" href="css/footer-auth.css">
     <title>Logowanie / Rejestracja</title>
 
 
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="container flex-header">
-            <!--<div class="logo">SYL<span></span>CAR</div>-->
-            <div class="logo">
-                <span class="logo-fire">SYLCAR</span>
-            </div>
-            <nav aria-label="Główne">
-                <ul class="nav-menu">
-                    <li><a href="index.html#about">O nas</a></li>
-                    <li><a href="index.html#contact">Kontakt</a></li>
-                    <li><a href="auth.html">Zaloguj</a></li>
-                    <li><a href="auth.html" class="nav-btn">Zarejestruj</a></li>
-                </ul>
-            </nav>
+    
+<header class="main-header">
+    <div class="container flex-header">
+        <div class="logo">
+            <span class="logo-fire">SYLCAR</span>
         </div>
-    </header>
+
+        <button class="hamburger" aria-label="Otwórz menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="nav-container" aria-label="Główne">
+            <ul class="nav-menu">
+                <li><a href="index.html#about">O nas</a></li>
+                <li><a href="index.html#contact">Kontakt</a></li>
+                <li><a href="panelklienta.html#panel-klienta">Panel klienta</a></li>
+                <li><a href="auth.html">Zaloguj</a></li>
+                <li><a href="auth.html#register" class="nav-btn">Zarejestruj</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <main class="auth-wrapper">
         <div class="auth-container">
@@ -270,6 +278,7 @@
     </footer>
 
     <script src="js/auth.js"></script>
+    <script src="js/modalmenu.js"></script>
 
 </body>
 

@@ -1,0 +1,94 @@
+/* ==========================================
+   GŁÓWNA STOPKA - BIAŁE NAPISY & STAL
+   ========================================== */
+.site-footer {
+    background: #020617; /* Spójny granat */
+    padding: 60px 20px 20px;
+    color: #ffffff; /* GŁÓWNY KOLOR BIAŁY */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtelna linia oddzielająca */
+}
+
+.footer-two {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* NAGŁÓWKI SEKCJI - CZYSTA BIEL */
+.footer-title {
+    font-size: 20px;
+    color: #ffffff !important; 
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+}
+
+/* STYL DLA FAQ (DETAILS) */
+.faq details {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 15px 0;
+}
+
+.faq summary {
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #cbd5e1; /* Jasna stal dla pytań */
+    transition: all 0.3s;
+}
+
+/* PLUSIK - teraz biały lub pomarańczowy akcent marki */
+.faq summary::after {
+    content: '+';
+    font-size: 22px;
+    color: #ffffff
+    font-weight: bold;
+}
+
+/* Efekt otwarcia */
+.faq details[open] summary {
+    color: #ffffff; /* Pytanie staje się czysto białe po otwarciu */
+    margin-bottom: 10px;
+}
+
+.faq details[open] summary::after {
+    content: '−';
+    color: #ffffff;
+}
+
+.faq summary:hover {
+    color: #ffffff; /* Podświetlenie na biało przy najechaniu */
+}
+
+/* TREŚĆ PO ROZWINIĘCIU - CZYTELNA */
+.faq-content {
+    padding-bottom: 10px;
+    color: #94a3b8; /* Szary tekst odpowiedzi (żeby nie biło po oczach) */
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* DOLNY PASEK (COPYRIGHT) */
+.footer-bottom {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 13px;
+    color: #64748b; /* Stonowany szary na samym dole */
+}
+
+/* RESPONSYWNOŚĆ */
+@media (max-width: 768px) {
+    .footer-two {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}

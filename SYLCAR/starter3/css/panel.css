@@ -1,0 +1,122 @@
+/* 1. GŁÓWNY KONTENER PANELU - CIEMNY */
+.panel-container {
+    background-color: #020617; /* Powrót do Twojego bazowego granatu */
+    padding: 40px 0;
+    min-height: 85vh;
+}
+
+/* Flexbox dla układu kolumn */
+.flex-main {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* 2. LEWA KOLUMNA (SIDEBAR) - CIEMNA KARTA */
+.panel-sidebar {
+    flex: 0 0 280px; 
+    background: #0f172a; /* Odrobinę jaśniejszy od tła głównego */
+    padding: 25px;
+    border-radius: 12px;
+   
+    
+}
+
+/* Zmień w .panel-sidebar oraz .content-card */
+.panel-sidebar, .content-card {
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Stalowa, dyskretna ramka */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Głęboki, czarny cień */
+}
+
+/* Nagłówki w menu bocznym */
+.panel-nav h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #64748b; /* Stonowany szary */
+    margin: 25px 0 10px 0;
+}
+
+/* Lista linków */
+.panel-nav a {
+    text-decoration: none;
+    color: #cbd5e1; /* Jasnoszary tekst */
+    padding: 10px 15px;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+/* Aktywne linki i Hover - Teraz świecą na błękitno */
+/* Zmień to w .panel-nav a:hover i .panel-nav a.active */
+.panel-nav a:hover, 
+.panel-nav a.active {
+    background-color: rgba(249, 115, 22, 0.1); /* Bardzo delikatny pomarańczowy blask */
+    color: #f97316; /* Twoja marka - pomarańczowy */
+    box-shadow: inset 4px 0 0 #f97316; /* Zamiast błękitnego paska, pomarańczowy */
+}
+
+/* Specjalny kolor dla wylogowania */
+.logout-link {
+    color: #ef4444 !important;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 15px !important;
+}
+
+/* 3. PRAWA KOLUMNA (TREŚĆ) - CIEMNA KARTA */
+.panel-content {
+    flex: 1;
+}
+
+.content-card {
+    background: #0f172a;
+    padding: 30px;
+    border-radius: 12px;
+    color: #f1f5f9;
+}
+
+.content-card h2 {
+    margin-top: 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+/* 4. STATUS I BADGE */
+.status-box {
+    background: rgba(15, 23, 42, 0.8);
+    padding: 20px;
+   border-left: 4px solid #f97316;
+    border-radius: 6px;
+    margin: 20px 0;
+    color: #cbd5e1;
+
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Naprawa jaskrawości badge'a */
+.badge-work {
+    background: rgba(245, 158, 11, 0.2); /* Przezroczysty pomarańcz */
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+/* 5. RESPONSYWNOŚĆ */
+@media (max-width: 992px) {
+    .flex-main {
+        flex-direction: column;
+    }
+    .panel-sidebar {
+        width: 100%;
+    }
+}
