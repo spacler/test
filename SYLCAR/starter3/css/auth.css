@@ -73,7 +73,7 @@
 
 	/* USTALAMY STAŁĄ WYSOKOŚĆ */
 	/* Dopasuj tę wartość (np. 550px lub 600px), aby zmieścił się najdłuższy formularz */
-	height: 800px;
+	height: 850px;
 	position: relative;
 	overflow: hidden; /* zapobiega wystawaniu elementów podczas animacji */
 }
