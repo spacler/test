@@ -86,33 +86,45 @@
                 </form>
     
                 <form id="registerForm" class="contact-form is-hidden">
-                    <h2 class="form-title">Stwórz konto</h2>
-    
-                    <div class="form-group">
-                        <label for="regUser">Nazwa użytkownika</label>
-                        <input type="text" id="regUser" placeholder="Twój nick">
-                        <div class="error" id="regUserError"></div>
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="regEmail">Email</label>
-                        <input type="email" id="regEmail" placeholder="email@przyklad.pl">
-                        <div class="error" id="regEmailError"></div>
-                    </div>
-    
-                    <div class="form-group password-wrapper">
-                        <label for="regPass">Hasło</label>
-                        <input type="password" id="regPass" placeholder="••••••••">
-                        <span class="toggle-pass" onclick="togglePass('regPass')">👁</span>
-                        <div class="error" id="regPassError"></div>
-                    </div>
-    
-                    <div class="form-group password-wrapper">
-                        <label for="regPass2">Powtórz hasło</label>
-                        <input type="password" id="regPass2" placeholder="••••••••">
-                        <span class="toggle-pass" onclick="togglePass('regPass2')">👁</span>
-                        <div class="error" id="regPass2Error"></div>
-                    </div>
+    <h2 class="form-title">Stwórz konto</h2>
+
+    <div class="form-group">
+        <label for="regFirstName">Imię</label>
+        <input type="text" id="regFirstName" placeholder="Jan">
+        <div class="error" id="regFirstNameError"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="regLastName">Nazwisko</label>
+        <input type="text" id="regLastName" placeholder="Kowalski">
+        <div class="error" id="regLastNameError"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="regPhone">Numer telefonu</label>
+        <input type="tel" id="regPhone" placeholder="500 600 700">
+        <div class="error" id="regPhoneError"></div>
+    </div>
+
+    <div class="form-group">
+        <label for="regEmail">Email</label>
+        <input type="email" id="regEmail" placeholder="email@przyklad.pl">
+        <div class="error" id="regEmailError"></div>
+    </div>
+
+    <div class="form-group password-wrapper">
+        <label for="regPass">Hasło</label>
+        <input type="password" id="regPass" placeholder="••••••••">
+        <span class="toggle-pass" onclick="togglePass('regPass')">👁</span>
+        <div class="error" id="regPassError"></div>
+    </div>
+
+    <div class="form-group password-wrapper">
+        <label for="regPass2">Powtórz hasło</label>
+        <input type="password" id="regPass2" placeholder="••••••••">
+        <span class="toggle-pass" onclick="togglePass('regPass2')">👁</span>
+        <div class="error" id="regPass2Error"></div>
+    </div>
     
                     <div class="form-group checkbox">
                         <input type="checkbox" id="regTerms">
