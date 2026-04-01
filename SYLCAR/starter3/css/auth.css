@@ -80,7 +80,7 @@ margin-bottom: 20px;
 font-size: 24px;
 }
 
-/* TABS /
+/* TABS */
 .auth-tabs {
 display: flex;
 margin-bottom: 30px;
@@ -108,7 +108,7 @@ color: #020617;
 font-weight: 600;
 }
 
-/* FORMULARZE /
+/* FORMULARZE */
 .contact-form {
 position: absolute;
 / 40px paddingu + ok. 50px na zakładki = startujemy od 100px od góry */
