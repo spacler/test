@@ -70,8 +70,7 @@
     min-height: 600px;
     height: auto; 
     position: relative;
-    overflow: hidden; 
-    justify-content: center;
+    overflow: hidden;
 }
 
 .form-title {
