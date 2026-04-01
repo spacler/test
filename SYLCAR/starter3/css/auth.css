@@ -236,9 +236,9 @@ font-size: 11px;
 min-height: 15px;
 margin-top: 2px;
 }
-/* regulacja oka podgladu hasla  /
+/* regulacja oka podgladu hasla  */
 .password-wrapper {
-position: relative; / Kotwica dla ikony oka */
+position: relative; /* Kotwica dla ikony oka */
 display: flex;
 flex-direction: column;
 }
