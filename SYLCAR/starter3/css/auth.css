@@ -113,7 +113,7 @@
    ========================================= */
 .contact-form {
     position: absolute;
-    top: 110px; /* Obniżone, żeby nie nachodziło na taby */
+    top: 100px; /* Obniżone, żeby nie nachodziło na taby */
     left: 40px;
     right: 40px;
     display: flex;  
