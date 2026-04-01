@@ -67,16 +67,17 @@
 /* =========================================
    3. PRAWA STRONA (FORM BOX)
    ========================================= */
-.auth-box {
+
+auth-box {
     background: rgba(15, 23, 42, 0.95);
     padding: 40px;
     display: flex;
     flex-direction: column;
-    flex:1;
-    height:100%;
+    height: 100%; /* wystarczy, bez flex:1 */
     position: relative;
     overflow: hidden;
 }
+
 
 .form-title {
     color: white;
@@ -116,20 +117,20 @@
    4. FORMULARZE I POLA WEJŚCIA
    ========================================= */
 .contact-form {
-    position: relative; /* Zmień z absolute na relative */
-    margin-top: 20px;   /* Zamiast top: 100px */
-    display: flex;  
-    flex-direction: column;  
-    transition: all 0.4s ease-in-out;  
-    opacity: 1;  
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px; /* mniejsza przerwa */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.is-hidden {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
 }
 
 
-.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateX(-20px);
-    visibility: hidden; 
 }
 
 .form-group {
