@@ -70,10 +70,10 @@
 	padding: 40px;
 	display: flex;
 	flex-direction: column;
- max-height: 100%;
 
 	/* USTALAMY STAŁĄ WYSOKOŚĆ */
 	/* Dopasuj tę wartość (np. 550px lub 600px), aby zmieścił się najdłuższy formularz */
+height:1000px;
 
 	overflow: hidden; /* zapobiega wystawaniu elementów podczas animacji */
 }
@@ -119,8 +119,6 @@
 	top: 100px;
 	left: 40px;
 	right: 40px;
-bottom: 20px;
-overflow-y: auto;
 
 
 	display: flex;
@@ -128,19 +126,6 @@ overflow-y: auto;
 	transition: all 0.4s ease-in-out;
 	opacity: 1;
 	transform: translateX(0);
-}
-
-.contact-form::-webkit-scrollbar {
-    width: 6px;
-}
-
-.contact-form::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.contact-form::-webkit-scrollbar-thumb {
-    background: #38bdf8;
-    border-radius: 10px;
 }
 
 .is-hidden {
