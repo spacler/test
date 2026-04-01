@@ -1,326 +1,280 @@
-/* WRAPPER */  
+/* =========================================
+   1. GŁÓWNA STRUKTURA (WRAPPER & CONTAINER)
+   ========================================= */
 .auth-wrapper {  
-        display: flex;  
-        justify-content: center;  
-        align-items: center;  
-        min-height: 100vh;  
-        padding: 20px;  
-        background: #020617; /* tło pod kontenerem */  
-}  .auth-container {
-display: grid;
-grid-template-columns: 1fr 1fr; 
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    min-height: 100vh;  
+    padding: 20px;  
+    background: #020617; 
+}  
 
-width: 100%;  
-    max-width: 1200px; /* 🔥 KLUCZ */  
-
+.auth-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    width: 100%;  
+    max-width: 1200px; 
     border-radius: 18px;  
     overflow: hidden;  
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);  
-
-    margin: 0 auto; /* 🔥 CENTROWANIE */
-
+    margin: 0 auto;
 }
 
-/* LEWA STRONA */
+/* =========================================
+   2. LEWA STRONA (GRAFIKA / TEKST)
+   ========================================= */
 .auth-image {
-background: url('../assets/obd.png') center/cover no-repeat;
-position: relative;
-display: flex;
-/* ZMIANA: center zamiast flex-end, aby tekst był w połowie wysokości */
-align-items: center;
-/* ZMIANA: center, aby kontener z tekstem był w połowie szerokości */
-justify-content: center;
-padding: 40px;
-text-align: center; /* Wyśrodkowanie samych liter wewnątrz h2 i p */
+    background: url('../assets/obd.png') center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
 }
+
 .auth-image::after {
-content: '';
-position: absolute;
-inset: 0;
-background: linear-gradient(to top, rgba(2, 6, 23, 0.95), rgba(2, 6, 23, 0.2));
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(2, 6, 23, 0.95), rgba(2, 6, 23, 0.2));
 }
 
 .auth-image-content {
-position: relative;
-z-index: 2;
-color: white;
-/* Opcjonalnie: ogranicz szerokość tekstu, żeby ładniej wyglądał w środku */
-max-width: 80% ;
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 80%;
 }
 
 .auth-image-content h2 {
-font-size: 32px; /* Możesz go trochę powiększyć, skoro jest na środku */
-margin-bottom: 15px;
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
 .auth-image-content p {
-font-size: 16px;
-line-height: 1.5;
-opacity: 0.9;
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.9;
 }
 
-/* PRAWA STRONA */
+/* =========================================
+   3. PRAWA STRONA (FORM BOX)
+   ========================================= */
 .auth-box {
-background: rgba(15, 23, 42, 0.95);
-padding: 40px;
-display: flex;
-flex-direction: column;
-
-/* USTALAMY STAŁĄ WYSOKOŚĆ */  
-    /* Dopasuj tę wartość (np. 550px lub 600px), aby zmieścił się najdłuższy formularz */  
-    height: 900px;  
-    position: relative;  
-    overflow: hidden; /* zapobiega wystawaniu elementów podczas animacji */
-
+    background: rgba(15, 23, 42, 0.95);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 900px; 
+    position: relative;
+    overflow: hidden; 
 }
 
 .form-title {
-color: white;
-margin-bottom: 20px;
-font-size: 24px;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 24px;
 }
 
-/* TABS */
+/* TABS (PRZEŁĄCZANIE) */
 .auth-tabs {
-display: flex;
-margin-bottom: 30px;
-background: #020617;
-border-radius: 12px;
-padding: 5px;
-position: relative;
-z-index: 10; / zawsze nad formularzami */
+    display: flex;
+    margin-bottom: 30px;
+    background: #020617;
+    border-radius: 12px;
+    padding: 5px;
+    position: relative;
+    z-index: 20; /* Poprawiony komentarz */
 }
 
 .auth-tabs button {
-flex: 1;
-padding: 10px;
-border: none;
-background: transparent;
-color: #94a3b8;
-cursor: pointer;
-border-radius: 8px;
-transition: 0.3s;
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: #94a3b8;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
 .auth-tabs button.active {
-background: #38bdf8;
-color: #020617;
-font-weight: 600;
+    background: #38bdf8;
+    color: #020617;
+    font-weight: 600;
 }
 
-/* FORMULARZE */
+/* =========================================
+   4. FORMULARZE I POLA WEJŚCIA
+   ========================================= */
 .contact-form {
-position: absolute;
-/* 40px paddingu + ok. 50px na zakładki = startujemy od 100px od góry */
-top: 100px;
-left: 40px;
-right: 40px;
-
-display: flex;  
+    position: absolute;
+    top: 150px; /* Obniżone, żeby nie nachodziło na taby */
+    left: 40px;
+    right: 40px;
+    display: flex;  
     flex-direction: column;  
     transition: all 0.4s ease-in-out;  
     opacity: 1;  
     transform: translateX(0);
-
 }
 
 .is-hidden {
-opacity: 0;
-pointer-events: none;
-transform: translateX(-20px); /* delikatny efekt przesunięcia */
-display: none; <-- Usuwamy to, bo gryzie się z animacją opacity */
-visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-20px);
+    visibility: hidden; 
 }
 
-@keyframes fadeIn {
-from {
-opacity: 0;
-transform: translateY(10px);
-}
-to {
-opacity: 1;
-transform: translateY(0);
-}
-}
-
-/* INPUTY */
 .form-group {
-display: flex;
-flex-direction: column;
-margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    position: relative;
 }
 
 .form-group label {
-color: #94a3b8;
-font-size: 13px;
-margin-bottom: 5px;
-}
-
-.form-group.checkbox {
-flex-direction: row; /* Układa input i label w jednej linii */
-align-items: center; /* Wyrównuje checkbox pionowo do środka tekstu */
-gap: 10px; /* Odstęp między checkboxem a tekstem */
-margin-top: 10px; /* Dodatkowy odstęp od pola hasła */
-cursor: pointer;
-}
-
-/* Specyficzny styl dla grupy z checkboxem */
-.form-group.checkbox {
-flex-direction: row; /* Układa input i label w jednej linii */
-align-items: center; /* Wyrównuje checkbox pionowo do środka tekstu */
-gap: 10px; /* Odstęp między checkboxem a tekstem */
-margin-top: 10px; /* Dodatkowy odstęp od pola hasła */
-cursor: pointer;
-}
-
-/* Usuwamy margines dolny labela wewnątrz checkboxa, żeby nie psuł wyrównania */
-.form-group.checkbox label {
-margin-bottom: 0;
-color: #e2e8f0; /* Jaśniejszy kolor dla lepszej czytelności */
-cursor: pointer; /* Kliknięcie w tekst też zaznaczy checkbox */
-font-size: 14px;
-}
-
-/* Opcjonalnie: powiększenie samego kwadracika checkboxa */
-.form-group.checkbox input[type='checkbox'] {
-width: 16px;
-height: 16px;
-cursor: pointer;
-accent-color: #38bdf8; /* Zmienia kolor zaznaczenia na niebieski (pasuje do buttona) */
+    color: #94a3b8;
+    font-size: 13px;
+    margin-bottom: 5px;
 }
 
 input {
-padding: 12px;
-border-radius: 10px;
-border: 1px solid #1e293b;
-background: #020617;
-color: #e2e8f0;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    background: #020617;
+    color: #e2e8f0;
+    outline: none;
+    transition: 0.3s;
 }
 
 input:focus {
-outline: none;
-border-color: #38bdf8;
+    border-color: #38bdf8;
 }
 
-/* OPCJE I PRZYCISKI */
-.form-options {
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin: 10px 0 20px;
-font-size: 13px;
+/* CHECKBOX */
+.form-group.checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
-.forgot {
-color: #38bdf8;
-text-decoration: none;
+.form-group.checkbox label {
+    margin-bottom: 0;
+    color: #e2e8f0;
+    font-size: 14px;
 }
 
-.contact-btn {
-padding: 14px;
-border-radius: 10px;
-border: none;
-background: #38bdf8;
-font-weight: 700;
-cursor: pointer;
-transition: 0.3s;
+.form-group.checkbox input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    accent-color: #38bdf8;
 }
 
-.contact-btn:hover {
-background: #0ea5e9;
-}
-
-.error {
-color: #f87171;
-font-size: 11px;
-min-height: 15px;
-margin-top: 2px;
-}
-/* regulacja oka podgladu hasla  */
+/* HASŁO I IKONA OKA */
 .password-wrapper {
-position: relative; /* Kotwica dla ikony oka */
-display: flex;
-flex-direction: column;
-}
-
-.password-wrapper label {
-margin-bottom: 5px; /* Stały odstęp dla przewidywalności */
-}
-
-.password-wrapper input {
-width: 100%;
-padding-right: 45px; /* Miejsce wewnątrz, żeby tekst nie nachodził na oko */
+    position: relative;
 }
 
 .toggle-pass {
-position: absolute;
-right: 12px;
-/* Obliczamy: Wysokość labela (ok. 20px) + margines (5px) + środek inputa */
-top: 25px;
-
-cursor: pointer;  
+    position: absolute;
+    right: 12px;
+    top: 28px; /* Pozycja dopasowana do inputa */
+    cursor: pointer;  
     color: #94a3b8;  
     font-size: 18px;  
     z-index: 10;  
-    user-select: none; /* Zapobiega zaznaczaniu ikony przy szybkim klikaniu */  
-    transition: color 0.2s;  
-
-    /* Wyśrodkowanie pionowe ikony wewnątrz jej własnej wysokości */  
-    display: flex;  
-    align-items: center;  
-    height: 45px; /* Powinno być równe wysokości inputa */
-
+    user-select: none;
+    transition: color 0.2s;
 }
 
 .toggle-pass:hover {
-color: #38bdf8;
-}
-/* MOBILE */
-@media (max-width: 768px) {
-.auth-container {
-grid-template-columns: 1fr;
-}
-.auth-image {
-display: none;
-}
-}
-/* Walidacja  Formularza*/
-
-.form-group {
-position: relative;
-margin-bottom: 15px;
+    color: #38bdf8;
 }
 
-/* INPUTY */
-.form-group input {
-width: 100%;
-padding: 10px;
-border: 2px solid #ccc;
-border-radius: 8px;
-outline: none;
-transition: 0.2s;
-}
-
-/* OK */
+/* =========================================
+   5. WALIDACJA I KOMUNIKATY
+   ========================================= */
 .form-group.success input {
-border-color: #22c55e;
+    border-color: #22c55e;
 }
 
-/* ERROR */
 .form-group.error input {
-border-color: #ef4444;
+    border-color: #ef4444;
 }
 
-/* komunikat pod inputem */
 .error {
-font-size: 12px;
-color: #ef4444;
-margin-top: 5px;
+    color: #f87171;
+    font-size: 11px;
+    min-height: 15px;
+    margin-top: 4px;
 }
 
-/* hint (dymek / podpowiedź) */
 .hint {
-font-size: 12px;
-color: #94a3b8;
-margin-top: 4px;
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+/* =========================================
+   6. PRZYCISKI I LINKI
+   ========================================= */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 20px;
+    font-size: 13px;
+}
+
+.forgot {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.contact-btn {
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: #38bdf8;
+    color: #020617;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.contact-btn:hover {
+    background: #0ea5e9;
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   7. RESPONSYWNOŚĆ (MOBILE)
+   ========================================= */
+@media (max-width: 768px) {
+    .auth-container {
+        grid-template-columns: 1fr;
+    }
+    .auth-image {
+        display: none;
+    }
+    .auth-box {
+        height: auto;
+        min-height: 600px;
+        padding: 30px 20px;
+    }
+    .contact-form {
+        position: relative; /* Przywrócenie flow na mobile */
+        top: 0;
+        left: 0;
+        right: 0;
+        margin-top: 20px;
+    }
 }
