@@ -65,9 +65,10 @@
 .auth-box {
     background: rgba(15, 23, 42, 0.95);
     padding: 40px;
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
-    min-height: 900px;
+    min-height: 1050px;
     height: auto; 
     position: relative;
     overflow: hidden; 
@@ -112,7 +113,7 @@
    ========================================= */
 .contact-form {
     position: absolute;
-    top: 150px; /* Obniżone, żeby nie nachodziło na taby */
+    top: 110px; /* Obniżone, żeby nie nachodziło na taby */
     left: 40px;
     right: 40px;
     display: flex;  
