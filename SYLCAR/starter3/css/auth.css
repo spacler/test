@@ -111,7 +111,7 @@ font-weight: 600;
 /* FORMULARZE */
 .contact-form {
 position: absolute;
-/ 40px paddingu + ok. 50px na zakładki = startujemy od 100px od góry */
+/* 40px paddingu + ok. 50px na zakładki = startujemy od 100px od góry */
 top: 100px;
 left: 40px;
 right: 40px;
