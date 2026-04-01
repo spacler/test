@@ -265,20 +265,21 @@ input:focus {
 @media (max-width: 768px) {
     .auth-container {
         grid-template-columns: 1fr;
+        min-height: 100vh;
     }
+
     .auth-image {
         display: none;
     }
+
     .auth-box {
         height: auto;
-        min-height: 100vh;
+        min-height: auto; /* ❌ usuwamy 100vh */
         padding: 30px 20px;
     }
+
     .contact-form {
-        position: relative; /* Przywrócenie flow na mobile */
-        top: 0;
-        left: 0;
-        right: 0;
-        margin-top: 20px;
+        position: relative;
+        margin-top: 10px; /* mniej pustej przestrzeni */
     }
 }
