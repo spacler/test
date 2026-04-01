@@ -127,8 +127,8 @@ display: flex;
 .is-hidden {
 opacity: 0;
 pointer-events: none;
-transform: translateX(-20px); /* delikatny efekt przesunięcia /
-/ display: none; <-- Usuwamy to, bo gryzie się z animacją opacity */
+transform: translateX(-20px); /* delikatny efekt przesunięcia */
+display: none; <-- Usuwamy to, bo gryzie się z animacją opacity */
 visibility: hidden;
 }
 
@@ -157,36 +157,36 @@ margin-bottom: 5px;
 }
 
 .form-group.checkbox {
-flex-direction: row; /* Układa input i label w jednej linii /
-align-items: center; / Wyrównuje checkbox pionowo do środka tekstu /
-gap: 10px; / Odstęp między checkboxem a tekstem /
-margin-top: 10px; / Dodatkowy odstęp od pola hasła */
+flex-direction: row; /* Układa input i label w jednej linii */
+align-items: center; /* Wyrównuje checkbox pionowo do środka tekstu */
+gap: 10px; /* Odstęp między checkboxem a tekstem */
+margin-top: 10px; /* Dodatkowy odstęp od pola hasła */
 cursor: pointer;
 }
 
-/* Specyficzny styl dla grupy z checkboxem /
+/* Specyficzny styl dla grupy z checkboxem */
 .form-group.checkbox {
-flex-direction: row; / Układa input i label w jednej linii /
-align-items: center; / Wyrównuje checkbox pionowo do środka tekstu /
-gap: 10px; / Odstęp między checkboxem a tekstem /
-margin-top: 10px; / Dodatkowy odstęp od pola hasła */
+flex-direction: row; /* Układa input i label w jednej linii */
+align-items: center; /* Wyrównuje checkbox pionowo do środka tekstu */
+gap: 10px; /* Odstęp między checkboxem a tekstem */
+margin-top: 10px; /* Dodatkowy odstęp od pola hasła */
 cursor: pointer;
 }
 
-/* Usuwamy margines dolny labela wewnątrz checkboxa, żeby nie psuł wyrównania /
+/* Usuwamy margines dolny labela wewnątrz checkboxa, żeby nie psuł wyrównania */
 .form-group.checkbox label {
 margin-bottom: 0;
-color: #e2e8f0; / Jaśniejszy kolor dla lepszej czytelności /
-cursor: pointer; / Kliknięcie w tekst też zaznaczy checkbox */
+color: #e2e8f0; /* Jaśniejszy kolor dla lepszej czytelności */
+cursor: pointer; /* Kliknięcie w tekst też zaznaczy checkbox */
 font-size: 14px;
 }
 
-/* Opcjonalnie: powiększenie samego kwadracika checkboxa /
+/* Opcjonalnie: powiększenie samego kwadracika checkboxa */
 .form-group.checkbox input[type='checkbox'] {
 width: 16px;
 height: 16px;
 cursor: pointer;
-accent-color: #38bdf8; / Zmienia kolor zaznaczenia na niebieski (pasuje do buttona) */
+accent-color: #38bdf8; /* Zmienia kolor zaznaczenia na niebieski (pasuje do buttona) */
 }
 
 input {
