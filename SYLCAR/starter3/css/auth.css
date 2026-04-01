@@ -67,7 +67,7 @@
     padding: 40px;
     display: flex;
     flex-direction: column;
-    min-height: 600px;
+    height: 1150px;
     height: auto; 
     position: relative;
     overflow: hidden;
