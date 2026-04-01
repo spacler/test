@@ -71,6 +71,7 @@
     height: auto; 
     position: relative;
     overflow: hidden; 
+    justify-content: center;
 }
 
 .form-title {
