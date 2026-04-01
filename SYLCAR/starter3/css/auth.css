@@ -66,9 +66,7 @@
     background: rgba(15, 23, 42, 0.95);
     padding: 40px;
     display: flex;
-    flex-direction: column;
-    height: 1150px;
-    height: auto; 
+    flex-direction: column; 
     position: relative;
     overflow: hidden;
 }
