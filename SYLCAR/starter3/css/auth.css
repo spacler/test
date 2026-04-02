@@ -261,26 +261,39 @@ input:focus {
 }
 
 /* =========================================
-   7. RESPONSYWNOŚĆ (MOBILE)
+   7. RESPONSYWNOŚĆ (MOBILE) - POPRAWIONA
    ========================================= */
 @media (max-width: 768px) {
+    .auth-wrapper {
+        padding: 10px; /* Mniejszy margines od krawędzi ekranu */
+    }
+
     .auth-container {
-        grid-template-columns: 1fr;
-        min-height: 100vh;
+        grid-template-columns: 1fr; /* Jedna kolumna */
+        min-height: auto;
+        border-radius: 12px; /* Mniejszy promień na małym ekranie */
     }
 
     .auth-image {
-        display: none;
+        display: none; /* Ukrywamy grafikę */
     }
 
     .auth-box {
+        padding: 25px 15px; /* Kompaktowe odstępy */
         height: auto;
-        min-height: auto; /* ❌ usuwamy 100vh */
-        padding: 30px 20px;
+    }
+
+    .auth-tabs {
+        margin-bottom: 20px;
     }
 
     .contact-form {
-        position: relative;
-        margin-top: 10px; /* mniej pustej przestrzeni */
+        position: relative; /* Upewniamy się, że nie jest absolute */
+        margin-top: 0;
+    }
+    
+    .form-title {
+        font-size: 20px; /* Trochę mniejszy napis na telefonie */
+        margin-bottom: 15px;
     }
 }
