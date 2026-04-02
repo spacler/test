@@ -266,6 +266,7 @@ input:focus {
 @media (max-width: 768px) {
     .auth-wrapper {
         padding: 10px; /* Mniejszy margines od krawędzi ekranu */
+        align-items: flex-start
     }
 
     .auth-container {
