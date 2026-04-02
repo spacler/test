@@ -68,7 +68,7 @@
    3. PRAWA STRONA (FORM BOX)
    ========================================= */
 
-auth-box {
+.auth-box {
     background: rgba(15, 23, 42, 0.95);
     padding: 40px;
     display: flex;
