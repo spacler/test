@@ -297,3 +297,15 @@ input:focus {
         margin-bottom: 15px;
     }
 }
+
+/*poprawki*/
+
+@media (max-width: 768px) {
+
+    .is-hidden {
+        position: static;   /* 🔥 zmiana */
+        opacity: 0;
+        display: none;      /* lepsze niż pointer-events */
+    }
+
+}
